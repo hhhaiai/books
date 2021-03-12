@@ -1,0 +1,1040 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>特征抽取 | 机器学习算法课程定位、目标</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-katex/katex.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../day01/section3.html" />
+    
+    
+    <link rel="prev" href="../day01/section1.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="2.3"
+        data-chapter-title="特征抽取"
+        data-filepath="day01/section2.md"
+        data-basepath=".."
+        data-revision="Sat Jun 23 2018 19:16:24 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        机器学习课程
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="ml/index.html">
+            
+                
+                    <a href="../ml/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        机器学习概述
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="ml/section0.html">
+            
+                
+                    <a href="../ml/section0.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        人工智能概述
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="ml/section1.html">
+            
+                
+                    <a href="../ml/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        什么是机器学习
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="ml/section2.html">
+            
+                
+                    <a href="../ml/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        机器学习算法分类
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="ml/section3.html">
+            
+                
+                    <a href="../ml/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        机器学习开发流程
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="ml/section4.html">
+            
+                
+                    <a href="../ml/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        学习框架和资料介绍
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="day01/index.html">
+            
+                
+                    <a href="../day01/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        特征工程
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="day01/section0.html">
+            
+                
+                    <a href="../day01/section0.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        数据集
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="day01/section1.html">
+            
+                
+                    <a href="../day01/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        特征工程介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.3" data-path="day01/section2.html">
+            
+                
+                    <a href="../day01/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        特征抽取
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="day01/section3.html">
+            
+                
+                    <a href="../day01/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        特征预处理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="day01/section4.html">
+            
+                
+                    <a href="../day01/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        特征降维
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="day01/section5.html">
+            
+                
+                    <a href="../day01/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        主成分分析
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="day01/section6.html">
+            
+                
+                    <a href="../day01/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.</b>
+                        
+                        总结
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="day01/section7.html">
+            
+                
+                    <a href="../day01/section7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.8.</b>
+                        
+                        每日作业
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="day02/index.html">
+            
+                
+                    <a href="../day02/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        分类算法
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="day02/section1.html">
+            
+                
+                    <a href="../day02/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        数据集介绍与划分
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="day02/section2.html">
+            
+                
+                    <a href="../day02/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        sklearn转换器和估计器
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="day02/section3.html">
+            
+                
+                    <a href="../day02/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        K-近邻算法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="day02/section4.html">
+            
+                
+                    <a href="../day02/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        模型选择与调优
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="day02/section5.html">
+            
+                
+                    <a href="../day02/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        朴素贝叶斯算法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="day02/section6.html">
+            
+                
+                    <a href="../day02/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        决策树
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="day02/section7.html">
+            
+                
+                    <a href="../day02/section7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.</b>
+                        
+                        集成学习方法之随机森林
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="day02/section8.html">
+            
+                
+                    <a href="../day02/section8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.8.</b>
+                        
+                        总结
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="day02/section9.html">
+            
+                
+                    <a href="../day02/section9.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.9.</b>
+                        
+                        每日作业
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="day03/index.html">
+            
+                
+                    <a href="../day03/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        回归与聚类算法
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="day03/section1.html">
+            
+                
+                    <a href="../day03/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        线性回归
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="day03/section2.html">
+            
+                
+                    <a href="../day03/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        欠拟合与过拟合
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="day03/section3.html">
+            
+                
+                    <a href="../day03/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        线性回归的改进-岭回归
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="day03/section4.html">
+            
+                
+                    <a href="../day03/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        分类算法-逻辑回归与二分类
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="day03/section5.html">
+            
+                
+                    <a href="../day03/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        模型保存和加载
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="day03/section6.html">
+            
+                
+                    <a href="../day03/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        无监督学习-K-means算法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="day03/section7.html">
+            
+                
+                    <a href="../day03/section7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.7.</b>
+                        
+                        总结
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="day03/section8.html">
+            
+                
+                    <a href="../day03/section8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.8.</b>
+                        
+                        每日作业
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >机器学习算法课程定位、目标</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="23-&#x7279;&#x5F81;&#x63D0;&#x53D6;">2.3 &#x7279;&#x5F81;&#x63D0;&#x53D6;</h1>
+<h2 id="&#x5B66;&#x4E60;&#x76EE;&#x6807;">&#x5B66;&#x4E60;&#x76EE;&#x6807;</h2>
+<ul>
+<li>&#x76EE;&#x6807;<ul>
+<li>&#x5E94;&#x7528;DictVectorizer&#x5B9E;&#x73B0;&#x5BF9;&#x7C7B;&#x522B;&#x7279;&#x5F81;&#x8FDB;&#x884C;&#x6570;&#x503C;&#x5316;&#x3001;&#x79BB;&#x6563;&#x5316;</li>
+<li>&#x5E94;&#x7528;CountVectorizer&#x5B9E;&#x73B0;&#x5BF9;&#x6587;&#x672C;&#x7279;&#x5F81;&#x8FDB;&#x884C;&#x6570;&#x503C;&#x5316;</li>
+<li>&#x5E94;&#x7528;TfidfVectorizer&#x5B9E;&#x73B0;&#x5BF9;&#x6587;&#x672C;&#x7279;&#x5F81;&#x8FDB;&#x884C;&#x6570;&#x503C;&#x5316;</li>
+<li>&#x8BF4;&#x51FA;&#x4E24;&#x79CD;&#x6587;&#x672C;&#x7279;&#x5F81;&#x63D0;&#x53D6;&#x7684;&#x65B9;&#x5F0F;&#x533A;&#x522B;</li>
+</ul>
+</li>
+<li>&#x5E94;&#x7528;<ul>
+<li>&#x65E0;</li>
+</ul>
+</li>
+</ul>
+<p>&#x4EC0;&#x4E48;&#x662F;&#x7279;&#x5F81;&#x63D0;&#x53D6;&#x5462;&#xFF1F;</p>
+<p><img src="../images/&#x6587;&#x672C;&#x7279;&#x5F81;&#x63D0;&#x53D6;&#x56FE;.png" alt="&#x6587;&#x672C;&#x7279;&#x5F81;&#x63D0;&#x53D6;&#x56FE;"></p>
+<p><img src="../images/&#x5B57;&#x5178;&#x7279;&#x5F81;&#x63D0;&#x53D6;&#x56FE;.png" alt="&#x5B57;&#x5178;&#x7279;&#x5F81;&#x63D0;&#x53D6;&#x56FE;"></p>
+<h2 id="231-&#x7279;&#x5F81;&#x63D0;&#x53D6;">2.3.1 &#x7279;&#x5F81;&#x63D0;&#x53D6;</h2>
+<h3 id="1-&#x5C06;&#x4EFB;&#x610F;&#x6570;&#x636E;&#xFF08;&#x5982;&#x6587;&#x672C;&#x6216;&#x56FE;&#x50CF;&#xFF09;&#x8F6C;&#x6362;&#x4E3A;&#x53EF;&#x7528;&#x4E8E;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x7684;&#x6570;&#x5B57;&#x7279;&#x5F81;">1 &#x5C06;&#x4EFB;&#x610F;&#x6570;&#x636E;&#xFF08;&#x5982;&#x6587;&#x672C;&#x6216;&#x56FE;&#x50CF;&#xFF09;&#x8F6C;&#x6362;&#x4E3A;&#x53EF;&#x7528;&#x4E8E;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x7684;&#x6570;&#x5B57;&#x7279;&#x5F81;</h3>
+<blockquote>
+<p>&#x6CE8;&#xFF1A;&#x7279;&#x5F81;&#x503C;&#x5316;&#x662F;&#x4E3A;&#x4E86;&#x8BA1;&#x7B97;&#x673A;&#x66F4;&#x597D;&#x7684;&#x53BB;&#x7406;&#x89E3;&#x6570;&#x636E;</p>
+</blockquote>
+<ul>
+<li>&#x5B57;&#x5178;&#x7279;&#x5F81;&#x63D0;&#x53D6;(&#x7279;&#x5F81;&#x79BB;&#x6563;&#x5316;)</li>
+<li>&#x6587;&#x672C;&#x7279;&#x5F81;&#x63D0;&#x53D6;</li>
+<li>&#x56FE;&#x50CF;&#x7279;&#x5F81;&#x63D0;&#x53D6;&#xFF08;&#x6DF1;&#x5EA6;&#x5B66;&#x4E60;&#x5C06;&#x4ECB;&#x7ECD;&#xFF09;</li>
+</ul>
+<h3 id="2-&#x7279;&#x5F81;&#x63D0;&#x53D6;api">2 &#x7279;&#x5F81;&#x63D0;&#x53D6;API</h3>
+<pre><code class="lang-python">sklearn.feature_extraction
+</code></pre>
+<h2 id="232-&#x5B57;&#x5178;&#x7279;&#x5F81;&#x63D0;&#x53D6;">2.3.2 &#x5B57;&#x5178;&#x7279;&#x5F81;&#x63D0;&#x53D6;</h2>
+<p><strong>&#x4F5C;&#x7528;&#xFF1A;&#x5BF9;&#x5B57;&#x5178;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x7279;&#x5F81;&#x503C;&#x5316;</strong></p>
+<ul>
+<li>sklearn.feature_extraction.DictVectorizer(sparse=True,&#x2026;)<ul>
+<li>DictVectorizer.fit_transform(X)     X:&#x5B57;&#x5178;&#x6216;&#x8005;&#x5305;&#x542B;&#x5B57;&#x5178;&#x7684;&#x8FED;&#x4EE3;&#x5668;&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x8FD4;&#x56DE;sparse&#x77E9;&#x9635;</li>
+<li>DictVectorizer.inverse_transform(X)   X:array&#x6570;&#x7EC4;&#x6216;&#x8005;sparse&#x77E9;&#x9635; &#x8FD4;&#x56DE;&#x503C;:&#x8F6C;&#x6362;&#x4E4B;&#x524D;&#x6570;&#x636E;&#x683C;&#x5F0F;</li>
+<li>DictVectorizer.get_feature_names()    &#x8FD4;&#x56DE;&#x7C7B;&#x522B;&#x540D;&#x79F0;</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-&#x5E94;&#x7528;">1 &#x5E94;&#x7528;</h3>
+<p>&#x6211;&#x4EEC;&#x5BF9;&#x4EE5;&#x4E0B;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x7279;&#x5F81;&#x63D0;&#x53D6;</p>
+<pre><code class="lang-python">[{<span class="hljs-string">&apos;city&apos;</span>: <span class="hljs-string">&apos;&#x5317;&#x4EAC;&apos;</span>,<span class="hljs-string">&apos;temperature&apos;</span>:<span class="hljs-number">100</span>}
+{<span class="hljs-string">&apos;city&apos;</span>: <span class="hljs-string">&apos;&#x4E0A;&#x6D77;&apos;</span>,<span class="hljs-string">&apos;temperature&apos;</span>:<span class="hljs-number">60</span>}
+{<span class="hljs-string">&apos;city&apos;</span>: <span class="hljs-string">&apos;&#x6DF1;&#x5733;&apos;</span>,<span class="hljs-string">&apos;temperature&apos;</span>:<span class="hljs-number">30</span>}]
+</code></pre>
+<p><img src="../images/dictvec&#x7ED3;&#x679C;.png" alt="dictvec&#x7ED3;&#x679C;"></p>
+<h3 id="2-&#x6D41;&#x7A0B;&#x5206;&#x6790;">2 &#x6D41;&#x7A0B;&#x5206;&#x6790;</h3>
+<ul>
+<li>&#x5B9E;&#x4F8B;&#x5316;&#x7C7B;DictVectorizer</li>
+<li>&#x8C03;&#x7528;fit_transform&#x65B9;&#x6CD5;&#x8F93;&#x5165;&#x6570;&#x636E;&#x5E76;&#x8F6C;&#x6362;&#xFF08;&#x6CE8;&#x610F;&#x8FD4;&#x56DE;&#x683C;&#x5F0F;&#xFF09;</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> sklearn.feature_extraction <span class="hljs-keyword">import</span> DictVectorizer
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">dict_demo</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x5BF9;&#x5B57;&#x5178;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x7279;&#x5F81;&#x62BD;&#x53D6;
+    :return: None
+    &quot;&quot;&quot;</span>
+    data = [{<span class="hljs-string">&apos;city&apos;</span>: <span class="hljs-string">&apos;&#x5317;&#x4EAC;&apos;</span>,<span class="hljs-string">&apos;temperature&apos;</span>:<span class="hljs-number">100</span>}, {<span class="hljs-string">&apos;city&apos;</span>: <span class="hljs-string">&apos;&#x4E0A;&#x6D77;&apos;</span>,<span class="hljs-string">&apos;temperature&apos;</span>:<span class="hljs-number">60</span>}, {<span class="hljs-string">&apos;city&apos;</span>: <span class="hljs-string">&apos;&#x6DF1;&#x5733;&apos;</span>,<span class="hljs-string">&apos;temperature&apos;</span>:<span class="hljs-number">30</span>}]
+    <span class="hljs-comment"># 1&#x3001;&#x5B9E;&#x4F8B;&#x5316;&#x4E00;&#x4E2A;&#x8F6C;&#x6362;&#x5668;&#x7C7B;</span>
+    transfer = DictVectorizer(sparse=<span class="hljs-keyword">False</span>)
+    <span class="hljs-comment"># 2&#x3001;&#x8C03;&#x7528;fit_transform</span>
+    data = transfer.fit_transform(data)
+    print(<span class="hljs-string">&quot;&#x8FD4;&#x56DE;&#x7684;&#x7ED3;&#x679C;:\n&quot;</span>, data)
+    <span class="hljs-comment"># &#x6253;&#x5370;&#x7279;&#x5F81;&#x540D;&#x5B57;</span>
+    print(<span class="hljs-string">&quot;&#x7279;&#x5F81;&#x540D;&#x5B57;&#xFF1A;\n&quot;</span>, transfer.get_feature_names())
+
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">None</span>
+</code></pre>
+<p>&#x6CE8;&#x610F;&#x89C2;&#x5BDF;&#x6CA1;&#x6709;&#x52A0;&#x4E0A;sparse=False&#x53C2;&#x6570;&#x7684;&#x7ED3;&#x679C;</p>
+<pre><code class="lang-python">&#x8FD4;&#x56DE;&#x7684;&#x7ED3;&#x679C;:
+   (<span class="hljs-number">0</span>, <span class="hljs-number">1</span>)    <span class="hljs-number">1.0</span>
+  (<span class="hljs-number">0</span>, <span class="hljs-number">3</span>)    <span class="hljs-number">100.0</span>
+  (<span class="hljs-number">1</span>, <span class="hljs-number">0</span>)    <span class="hljs-number">1.0</span>
+  (<span class="hljs-number">1</span>, <span class="hljs-number">3</span>)    <span class="hljs-number">60.0</span>
+  (<span class="hljs-number">2</span>, <span class="hljs-number">2</span>)    <span class="hljs-number">1.0</span>
+  (<span class="hljs-number">2</span>, <span class="hljs-number">3</span>)    <span class="hljs-number">30.0</span>
+&#x7279;&#x5F81;&#x540D;&#x5B57;&#xFF1A;
+ [<span class="hljs-string">&apos;city=&#x4E0A;&#x6D77;&apos;</span>, <span class="hljs-string">&apos;city=&#x5317;&#x4EAC;&apos;</span>, <span class="hljs-string">&apos;city=&#x6DF1;&#x5733;&apos;</span>, <span class="hljs-string">&apos;temperature&apos;</span>]
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x7ED3;&#x679C;&#x5E76;&#x4E0D;&#x662F;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x770B;&#x5230;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x52A0;&#x4E0A;&#x53C2;&#x6570;&#xFF0C;&#x5F97;&#x5230;&#x60F3;&#x8981;&#x7684;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-python">&#x8FD4;&#x56DE;&#x7684;&#x7ED3;&#x679C;:
+ [[   <span class="hljs-number">0.</span>    <span class="hljs-number">1.</span>    <span class="hljs-number">0.</span>  <span class="hljs-number">100.</span>]
+ [   <span class="hljs-number">1.</span>    <span class="hljs-number">0.</span>    <span class="hljs-number">0.</span>   <span class="hljs-number">60.</span>]
+ [   <span class="hljs-number">0.</span>    <span class="hljs-number">0.</span>    <span class="hljs-number">1.</span>   <span class="hljs-number">30.</span>]]
+&#x7279;&#x5F81;&#x540D;&#x5B57;&#xFF1A;
+ [<span class="hljs-string">&apos;city=&#x4E0A;&#x6D77;&apos;</span>, <span class="hljs-string">&apos;city=&#x5317;&#x4EAC;&apos;</span>, <span class="hljs-string">&apos;city=&#x6DF1;&#x5733;&apos;</span>, <span class="hljs-string">&apos;temperature&apos;</span>]
+</code></pre>
+<p>&#x4E4B;&#x524D;&#x5728;&#x5B66;&#x4E60;pandas&#x4E2D;&#x7684;&#x79BB;&#x6563;&#x5316;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E5F;&#x5B9E;&#x73B0;&#x4E86;&#x7C7B;&#x4F3C;&#x7684;&#x6548;&#x679C;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x628A;&#x8FD9;&#x4E2A;&#x5904;&#x7406;&#x6570;&#x636E;&#x7684;&#x6280;&#x5DE7;&#x53EB;&#x505A;&#x201D;one-hot&#x201C;&#x7F16;&#x7801;&#xFF1A;</p>
+<p><img src="../images/onehot.png" alt="onehot"></p>
+<p>&#x8F6C;&#x5316;&#x4E3A;&#xFF1A;</p>
+<p><img src="../images/onehot1.png" alt="onehot1"></p>
+<h3 id="23-&#x603B;&#x7ED3;">2.3 &#x603B;&#x7ED3;</h3>
+<p><strong>&#x5BF9;&#x4E8E;&#x7279;&#x5F81;&#x5F53;&#x4E2D;&#x5B58;&#x5728;&#x7C7B;&#x522B;&#x4FE1;&#x606F;&#x7684;&#x6211;&#x4EEC;&#x90FD;&#x4F1A;&#x505A;one-hot&#x7F16;&#x7801;&#x5904;&#x7406;</strong></p>
+<h2 id="233-&#x6587;&#x672C;&#x7279;&#x5F81;&#x63D0;&#x53D6;">2.3.3 &#x6587;&#x672C;&#x7279;&#x5F81;&#x63D0;&#x53D6;</h2>
+<p><strong>&#x4F5C;&#x7528;&#xFF1A;&#x5BF9;&#x6587;&#x672C;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x7279;&#x5F81;&#x503C;&#x5316;</strong></p>
+<ul>
+<li><p><strong>sklearn.feature_extraction.text.CountVectorizer(stop_words=[])</strong></p>
+<ul>
+<li>&#x8FD4;&#x56DE;&#x8BCD;&#x9891;&#x77E9;&#x9635;</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>CountVectorizer.fit_transform(X)       X:&#x6587;&#x672C;&#x6216;&#x8005;&#x5305;&#x542B;&#x6587;&#x672C;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x53EF;&#x8FED;&#x4EE3;&#x5BF9;&#x8C61; &#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x8FD4;&#x56DE;sparse&#x77E9;&#x9635;</li>
+<li>CountVectorizer.inverse_transform(X)   X:array&#x6570;&#x7EC4;&#x6216;&#x8005;sparse&#x77E9;&#x9635;  &#x8FD4;&#x56DE;&#x503C;:&#x8F6C;&#x6362;&#x4E4B;&#x524D;&#x6570;&#x636E;&#x683C;</li>
+<li>CountVectorizer.get_feature_names()   &#x8FD4;&#x56DE;&#x503C;:&#x5355;&#x8BCD;&#x5217;&#x8868;</li>
+</ul>
+<ul>
+<li><strong>sklearn.feature_extraction.text.TfidfVectorizer</strong></li>
+</ul>
+<h3 id="1-&#x5E94;&#x7528;">1 &#x5E94;&#x7528;</h3>
+<p>&#x6211;&#x4EEC;&#x5BF9;&#x4EE5;&#x4E0B;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x7279;&#x5F81;&#x63D0;&#x53D6;</p>
+<pre><code class="lang-python">[<span class="hljs-string">&quot;life is short,i like python&quot;</span>,
+<span class="hljs-string">&quot;life is too long,i dislike python&quot;</span>]
+</code></pre>
+<p><img src="../images/countvec&#x7ED3;&#x679C;.png" alt="countvec&#x7ED3;&#x679C;"></p>
+<h3 id="2-&#x6D41;&#x7A0B;&#x5206;&#x6790;">2 &#x6D41;&#x7A0B;&#x5206;&#x6790;</h3>
+<ul>
+<li>&#x5B9E;&#x4F8B;&#x5316;&#x7C7B;CountVectorizer</li>
+<li>&#x8C03;&#x7528;fit_transform&#x65B9;&#x6CD5;&#x8F93;&#x5165;&#x6570;&#x636E;&#x5E76;&#x8F6C;&#x6362;  &#xFF08;&#x6CE8;&#x610F;&#x8FD4;&#x56DE;&#x683C;&#x5F0F;&#xFF0C;&#x5229;&#x7528;toarray()&#x8FDB;&#x884C;sparse&#x77E9;&#x9635;&#x8F6C;&#x6362;array&#x6570;&#x7EC4;&#xFF09;</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> sklearn.feature_extraction.text <span class="hljs-keyword">import</span> CountVectorizer
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">text_count_demo</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x5BF9;&#x6587;&#x672C;&#x8FDB;&#x884C;&#x7279;&#x5F81;&#x62BD;&#x53D6;&#xFF0C;countvetorizer
+    :return: None
+    &quot;&quot;&quot;</span>
+    data = [<span class="hljs-string">&quot;life is short,i like like python&quot;</span>, <span class="hljs-string">&quot;life is too long,i dislike python&quot;</span>]
+    <span class="hljs-comment"># 1&#x3001;&#x5B9E;&#x4F8B;&#x5316;&#x4E00;&#x4E2A;&#x8F6C;&#x6362;&#x5668;&#x7C7B;</span>
+    <span class="hljs-comment"># transfer = CountVectorizer(sparse=False)</span>
+    transfer = CountVectorizer()
+    <span class="hljs-comment"># 2&#x3001;&#x8C03;&#x7528;fit_transform</span>
+    data = transfer.fit_transform(data)
+    print(<span class="hljs-string">&quot;&#x6587;&#x672C;&#x7279;&#x5F81;&#x62BD;&#x53D6;&#x7684;&#x7ED3;&#x679C;&#xFF1A;\n&quot;</span>, data.toarray())
+    print(<span class="hljs-string">&quot;&#x8FD4;&#x56DE;&#x7279;&#x5F81;&#x540D;&#x5B57;&#xFF1A;\n&quot;</span>, transfer.get_feature_names())
+
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">None</span>
+</code></pre>
+<p>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-python">&#x6587;&#x672C;&#x7279;&#x5F81;&#x62BD;&#x53D6;&#x7684;&#x7ED3;&#x679C;&#xFF1A;
+ [[<span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span>]
+ [<span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span>]]
+&#x8FD4;&#x56DE;&#x7279;&#x5F81;&#x540D;&#x5B57;&#xFF1A;
+ [<span class="hljs-string">&apos;dislike&apos;</span>, <span class="hljs-string">&apos;is&apos;</span>, <span class="hljs-string">&apos;life&apos;</span>, <span class="hljs-string">&apos;like&apos;</span>, <span class="hljs-string">&apos;long&apos;</span>, <span class="hljs-string">&apos;python&apos;</span>, <span class="hljs-string">&apos;short&apos;</span>, <span class="hljs-string">&apos;too&apos;</span>]
+</code></pre>
+<h3 id="&#x95EE;&#x9898;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x5C06;&#x6570;&#x636E;&#x66FF;&#x6362;&#x6210;&#x4E2D;&#x6587;&#xFF1F;">&#x95EE;&#x9898;:&#x5982;&#x679C;&#x6211;&#x4EEC;&#x5C06;&#x6570;&#x636E;&#x66FF;&#x6362;&#x6210;&#x4E2D;&#x6587;&#xFF1F;</h3>
+<pre><code class="lang-python"><span class="hljs-string">&quot;&#x4EBA;&#x751F;&#x82E6;&#x77ED;&#xFF0C;&#x6211;&#x559C;&#x6B22;Python&quot;</span> <span class="hljs-string">&quot;&#x751F;&#x6D3B;&#x592A;&#x957F;&#x4E45;&#xFF0C;&#x6211;&#x4E0D;&#x559C;&#x6B22;Python&quot;</span>
+</code></pre>
+<p>&#x90A3;&#x4E48;&#x6700;&#x7EC8;&#x5F97;&#x5230;&#x7684;&#x7ED3;&#x679C;&#x662F;</p>
+<p><img src="../images/&#x4E0D;&#x652F;&#x6301;&#x5355;&#x4E2A;&#x4E2D;&#x6587;&#x5B57;.png" alt="&#x4E0D;&#x652F;&#x6301;&#x5355;&#x4E2A;&#x4E2D;&#x6587;&#x5B57;"></p>
+<p>&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x5F97;&#x5230;&#x8FD9;&#x6837;&#x7684;&#x7ED3;&#x679C;&#x5462;&#xFF0C;<strong>&#x4ED4;&#x7EC6;&#x5206;&#x6790;&#x4E4B;&#x540E;&#x4F1A;&#x53D1;&#x73B0;&#x82F1;&#x6587;&#x9ED8;&#x8BA4;&#x662F;&#x4EE5;&#x7A7A;&#x683C;&#x5206;&#x5F00;&#x7684;&#x3002;&#x5176;&#x5B9E;&#x5C31;&#x8FBE;&#x5230;&#x4E86;&#x4E00;&#x4E2A;&#x5206;&#x8BCD;&#x7684;&#x6548;&#x679C;</strong>&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x8981;&#x5BF9;&#x4E2D;&#x6587;&#x8FDB;&#x884C;&#x5206;&#x8BCD;&#x5904;&#x7406;</p>
+<h3 id="3-jieba&#x5206;&#x8BCD;&#x5904;&#x7406;">3 jieba&#x5206;&#x8BCD;&#x5904;&#x7406;</h3>
+<ul>
+<li>jieba.cut()<ul>
+<li>&#x8FD4;&#x56DE;&#x8BCD;&#x8BED;&#x7EC4;&#x6210;&#x7684;&#x751F;&#x6210;&#x5668;</li>
+</ul>
+</li>
+</ul>
+<p>&#x9700;&#x8981;&#x5B89;&#x88C5;&#x4E0B;jieba&#x5E93;</p>
+<pre><code class="lang-python">pip3 install jieba
+</code></pre>
+<h3 id="4-&#x6848;&#x4F8B;&#x5206;&#x6790;">4 &#x6848;&#x4F8B;&#x5206;&#x6790;</h3>
+<p>&#x5BF9;&#x4EE5;&#x4E0B;&#x4E09;&#x53E5;&#x8BDD;&#x8FDB;&#x884C;&#x7279;&#x5F81;&#x503C;&#x5316;</p>
+<pre><code class="lang-python">&#x4ECA;&#x5929;&#x5F88;&#x6B8B;&#x9177;&#xFF0C;&#x660E;&#x5929;&#x66F4;&#x6B8B;&#x9177;&#xFF0C;&#x540E;&#x5929;&#x5F88;&#x7F8E;&#x597D;&#xFF0C;
+&#x4F46;&#x7EDD;&#x5BF9;&#x5927;&#x90E8;&#x5206;&#x662F;&#x6B7B;&#x5728;&#x660E;&#x5929;&#x665A;&#x4E0A;&#xFF0C;&#x6240;&#x4EE5;&#x6BCF;&#x4E2A;&#x4EBA;&#x4E0D;&#x8981;&#x653E;&#x5F03;&#x4ECA;&#x5929;&#x3002;
+
+&#x6211;&#x4EEC;&#x770B;&#x5230;&#x7684;&#x4ECE;&#x5F88;&#x8FDC;&#x661F;&#x7CFB;&#x6765;&#x7684;&#x5149;&#x662F;&#x5728;&#x51E0;&#x767E;&#x4E07;&#x5E74;&#x4E4B;&#x524D;&#x53D1;&#x51FA;&#x7684;&#xFF0C;
+&#x8FD9;&#x6837;&#x5F53;&#x6211;&#x4EEC;&#x770B;&#x5230;&#x5B87;&#x5B99;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x662F;&#x5728;&#x770B;&#x5B83;&#x7684;&#x8FC7;&#x53BB;&#x3002;
+
+&#x5982;&#x679C;&#x53EA;&#x7528;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#x4E86;&#x89E3;&#x67D0;&#x6837;&#x4E8B;&#x7269;&#xFF0C;&#x4F60;&#x5C31;&#x4E0D;&#x4F1A;&#x771F;&#x6B63;&#x4E86;&#x89E3;&#x5B83;&#x3002;
+&#x4E86;&#x89E3;&#x4E8B;&#x7269;&#x771F;&#x6B63;&#x542B;&#x4E49;&#x7684;&#x79D8;&#x5BC6;&#x53D6;&#x51B3;&#x4E8E;&#x5982;&#x4F55;&#x5C06;&#x5176;&#x4E0E;&#x6211;&#x4EEC;&#x6240;&#x4E86;&#x89E3;&#x7684;&#x4E8B;&#x7269;&#x76F8;&#x8054;&#x7CFB;&#x3002;
+</code></pre>
+<ul>
+<li>&#x5206;&#x6790;<ul>
+<li>&#x51C6;&#x5907;&#x53E5;&#x5B50;&#xFF0C;&#x5229;&#x7528;jieba.cut&#x8FDB;&#x884C;&#x5206;&#x8BCD;</li>
+<li>&#x5B9E;&#x4F8B;&#x5316;CountVectorizer</li>
+<li>&#x5C06;&#x5206;&#x8BCD;&#x7ED3;&#x679C;&#x53D8;&#x6210;&#x5B57;&#x7B26;&#x4E32;&#x5F53;&#x4F5C;fit_transform&#x7684;&#x8F93;&#x5165;&#x503C;</li>
+</ul>
+</li>
+</ul>
+<p><img src="../images/&#x4E09;&#x6BB5;&#x4E2D;&#x6587;&#x7ED3;&#x679C;.png" alt="&#x4E09;&#x6BB5;&#x4E2D;&#x6587;&#x7ED3;&#x679C;"></p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> sklearn.feature_extraction.text <span class="hljs-keyword">import</span> CountVectorizer
+<span class="hljs-keyword">import</span> jieba
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">cut_word</span><span class="hljs-params">(text)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x5BF9;&#x4E2D;&#x6587;&#x8FDB;&#x884C;&#x5206;&#x8BCD;
+    &quot;&#x6211;&#x7231;&#x5317;&#x4EAC;&#x5929;&#x5B89;&#x95E8;&quot;&#x2014;&#x2014;&#x2014;&#x2014;&gt;&quot;&#x6211; &#x7231; &#x5317;&#x4EAC; &#x5929;&#x5B89;&#x95E8;&quot;
+    :param text:
+    :return: text
+    &quot;&quot;&quot;</span>
+    <span class="hljs-comment"># &#x7528;&#x7ED3;&#x5DF4;&#x5BF9;&#x4E2D;&#x6587;&#x5B57;&#x7B26;&#x4E32;&#x8FDB;&#x884C;&#x5206;&#x8BCD;</span>
+    text = <span class="hljs-string">&quot; &quot;</span>.join(list(jieba.cut(text)))
+
+    <span class="hljs-keyword">return</span> text
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">text_chinese_count_demo2</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x5BF9;&#x4E2D;&#x6587;&#x8FDB;&#x884C;&#x7279;&#x5F81;&#x62BD;&#x53D6;
+    :return: None
+    &quot;&quot;&quot;</span>
+    data = [<span class="hljs-string">&quot;&#x4E00;&#x79CD;&#x8FD8;&#x662F;&#x4E00;&#x79CD;&#x4ECA;&#x5929;&#x5F88;&#x6B8B;&#x9177;&#xFF0C;&#x660E;&#x5929;&#x66F4;&#x6B8B;&#x9177;&#xFF0C;&#x540E;&#x5929;&#x5F88;&#x7F8E;&#x597D;&#xFF0C;&#x4F46;&#x7EDD;&#x5BF9;&#x5927;&#x90E8;&#x5206;&#x662F;&#x6B7B;&#x5728;&#x660E;&#x5929;&#x665A;&#x4E0A;&#xFF0C;&#x6240;&#x4EE5;&#x6BCF;&#x4E2A;&#x4EBA;&#x4E0D;&#x8981;&#x653E;&#x5F03;&#x4ECA;&#x5929;&#x3002;&quot;</span>,
+            <span class="hljs-string">&quot;&#x6211;&#x4EEC;&#x770B;&#x5230;&#x7684;&#x4ECE;&#x5F88;&#x8FDC;&#x661F;&#x7CFB;&#x6765;&#x7684;&#x5149;&#x662F;&#x5728;&#x51E0;&#x767E;&#x4E07;&#x5E74;&#x4E4B;&#x524D;&#x53D1;&#x51FA;&#x7684;&#xFF0C;&#x8FD9;&#x6837;&#x5F53;&#x6211;&#x4EEC;&#x770B;&#x5230;&#x5B87;&#x5B99;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x662F;&#x5728;&#x770B;&#x5B83;&#x7684;&#x8FC7;&#x53BB;&#x3002;&quot;</span>,
+            <span class="hljs-string">&quot;&#x5982;&#x679C;&#x53EA;&#x7528;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#x4E86;&#x89E3;&#x67D0;&#x6837;&#x4E8B;&#x7269;&#xFF0C;&#x4F60;&#x5C31;&#x4E0D;&#x4F1A;&#x771F;&#x6B63;&#x4E86;&#x89E3;&#x5B83;&#x3002;&#x4E86;&#x89E3;&#x4E8B;&#x7269;&#x771F;&#x6B63;&#x542B;&#x4E49;&#x7684;&#x79D8;&#x5BC6;&#x53D6;&#x51B3;&#x4E8E;&#x5982;&#x4F55;&#x5C06;&#x5176;&#x4E0E;&#x6211;&#x4EEC;&#x6240;&#x4E86;&#x89E3;&#x7684;&#x4E8B;&#x7269;&#x76F8;&#x8054;&#x7CFB;&#x3002;&quot;</span>]
+    <span class="hljs-comment"># &#x5C06;&#x539F;&#x59CB;&#x6570;&#x636E;&#x8F6C;&#x6362;&#x6210;&#x5206;&#x597D;&#x8BCD;&#x7684;&#x5F62;&#x5F0F;</span>
+    text_list = []
+    <span class="hljs-keyword">for</span> sent <span class="hljs-keyword">in</span> data:
+        text_list.append(cut_word(sent))
+    print(text_list)
+
+    <span class="hljs-comment"># 1&#x3001;&#x5B9E;&#x4F8B;&#x5316;&#x4E00;&#x4E2A;&#x8F6C;&#x6362;&#x5668;&#x7C7B;</span>
+    <span class="hljs-comment"># transfer = CountVectorizer(sparse=False)</span>
+    transfer = CountVectorizer()
+    <span class="hljs-comment"># 2&#x3001;&#x8C03;&#x7528;fit_transform</span>
+    data = transfer.fit_transform(text_list)
+    print(<span class="hljs-string">&quot;&#x6587;&#x672C;&#x7279;&#x5F81;&#x62BD;&#x53D6;&#x7684;&#x7ED3;&#x679C;&#xFF1A;\n&quot;</span>, data.toarray())
+    print(<span class="hljs-string">&quot;&#x8FD4;&#x56DE;&#x7279;&#x5F81;&#x540D;&#x5B57;&#xFF1A;\n&quot;</span>, transfer.get_feature_names())
+
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">None</span>
+</code></pre>
+<p>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-python">Building prefix dict <span class="hljs-keyword">from</span> the default dictionary ...
+Dumping model to file cache /var/folders/mz/tzf2l3sx4rgg6qpglfb035_r0000gn/T/jieba.cache
+Loading model cost <span class="hljs-number">1.032</span> seconds.
+[<span class="hljs-string">&apos;&#x4E00;&#x79CD; &#x8FD8;&#x662F; &#x4E00;&#x79CD; &#x4ECA;&#x5929; &#x5F88; &#x6B8B;&#x9177; &#xFF0C; &#x660E;&#x5929; &#x66F4; &#x6B8B;&#x9177; &#xFF0C; &#x540E;&#x5929; &#x5F88; &#x7F8E;&#x597D; &#xFF0C; &#x4F46; &#x7EDD;&#x5BF9; &#x5927;&#x90E8;&#x5206; &#x662F; &#x6B7B; &#x5728; &#x660E;&#x5929; &#x665A;&#x4E0A; &#xFF0C; &#x6240;&#x4EE5; &#x6BCF;&#x4E2A; &#x4EBA; &#x4E0D;&#x8981; &#x653E;&#x5F03; &#x4ECA;&#x5929; &#x3002;&apos;</span>, <span class="hljs-string">&apos;&#x6211;&#x4EEC; &#x770B;&#x5230; &#x7684; &#x4ECE; &#x5F88; &#x8FDC; &#x661F;&#x7CFB; &#x6765; &#x7684; &#x5149;&#x662F;&#x5728; &#x51E0;&#x767E;&#x4E07;&#x5E74; &#x4E4B;&#x524D; &#x53D1;&#x51FA; &#x7684; &#xFF0C; &#x8FD9;&#x6837; &#x5F53; &#x6211;&#x4EEC; &#x770B;&#x5230; &#x5B87;&#x5B99; &#x65F6; &#xFF0C; &#x6211;&#x4EEC; &#x662F; &#x5728; &#x770B; &#x5B83; &#x7684; &#x8FC7;&#x53BB; &#x3002;&apos;</span>, <span class="hljs-string">&apos;&#x5982;&#x679C; &#x53EA;&#x7528; &#x4E00;&#x79CD; &#x65B9;&#x5F0F; &#x4E86;&#x89E3; &#x67D0;&#x6837; &#x4E8B;&#x7269; &#xFF0C; &#x4F60; &#x5C31; &#x4E0D;&#x4F1A; &#x771F;&#x6B63; &#x4E86;&#x89E3; &#x5B83; &#x3002; &#x4E86;&#x89E3; &#x4E8B;&#x7269; &#x771F;&#x6B63; &#x542B;&#x4E49; &#x7684; &#x79D8;&#x5BC6; &#x53D6;&#x51B3;&#x4E8E; &#x5982;&#x4F55; &#x5C06; &#x5176; &#x4E0E; &#x6211;&#x4EEC; &#x6240; &#x4E86;&#x89E3; &#x7684; &#x4E8B;&#x7269; &#x76F8; &#x8054;&#x7CFB; &#x3002;&apos;</span>]
+Prefix dict has been built succesfully.
+&#x6587;&#x672C;&#x7279;&#x5F81;&#x62BD;&#x53D6;&#x7684;&#x7ED3;&#x679C;&#xFF1A;
+ [[<span class="hljs-number">2</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">2</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span> <span class="hljs-number">2</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span> <span class="hljs-number">2</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span>]
+ [<span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">3</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">2</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span>]
+ [<span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">4</span> <span class="hljs-number">3</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">2</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span>]]
+&#x8FD4;&#x56DE;&#x7279;&#x5F81;&#x540D;&#x5B57;&#xFF1A;
+ [<span class="hljs-string">&apos;&#x4E00;&#x79CD;&apos;</span>, <span class="hljs-string">&apos;&#x4E0D;&#x4F1A;&apos;</span>, <span class="hljs-string">&apos;&#x4E0D;&#x8981;&apos;</span>, <span class="hljs-string">&apos;&#x4E4B;&#x524D;&apos;</span>, <span class="hljs-string">&apos;&#x4E86;&#x89E3;&apos;</span>, <span class="hljs-string">&apos;&#x4E8B;&#x7269;&apos;</span>, <span class="hljs-string">&apos;&#x4ECA;&#x5929;&apos;</span>, <span class="hljs-string">&apos;&#x5149;&#x662F;&#x5728;&apos;</span>, <span class="hljs-string">&apos;&#x51E0;&#x767E;&#x4E07;&#x5E74;&apos;</span>, <span class="hljs-string">&apos;&#x53D1;&#x51FA;&apos;</span>, <span class="hljs-string">&apos;&#x53D6;&#x51B3;&#x4E8E;&apos;</span>, <span class="hljs-string">&apos;&#x53EA;&#x7528;&apos;</span>, <span class="hljs-string">&apos;&#x540E;&#x5929;&apos;</span>, <span class="hljs-string">&apos;&#x542B;&#x4E49;&apos;</span>, <span class="hljs-string">&apos;&#x5927;&#x90E8;&#x5206;&apos;</span>, <span class="hljs-string">&apos;&#x5982;&#x4F55;&apos;</span>, <span class="hljs-string">&apos;&#x5982;&#x679C;&apos;</span>, <span class="hljs-string">&apos;&#x5B87;&#x5B99;&apos;</span>, <span class="hljs-string">&apos;&#x6211;&#x4EEC;&apos;</span>, <span class="hljs-string">&apos;&#x6240;&#x4EE5;&apos;</span>, <span class="hljs-string">&apos;&#x653E;&#x5F03;&apos;</span>, <span class="hljs-string">&apos;&#x65B9;&#x5F0F;&apos;</span>, <span class="hljs-string">&apos;&#x660E;&#x5929;&apos;</span>, <span class="hljs-string">&apos;&#x661F;&#x7CFB;&apos;</span>, <span class="hljs-string">&apos;&#x665A;&#x4E0A;&apos;</span>, <span class="hljs-string">&apos;&#x67D0;&#x6837;&apos;</span>, <span class="hljs-string">&apos;&#x6B8B;&#x9177;&apos;</span>, <span class="hljs-string">&apos;&#x6BCF;&#x4E2A;&apos;</span>, <span class="hljs-string">&apos;&#x770B;&#x5230;&apos;</span>, <span class="hljs-string">&apos;&#x771F;&#x6B63;&apos;</span>, <span class="hljs-string">&apos;&#x79D8;&#x5BC6;&apos;</span>, <span class="hljs-string">&apos;&#x7EDD;&#x5BF9;&apos;</span>, <span class="hljs-string">&apos;&#x7F8E;&#x597D;&apos;</span>, <span class="hljs-string">&apos;&#x8054;&#x7CFB;&apos;</span>, <span class="hljs-string">&apos;&#x8FC7;&#x53BB;&apos;</span>, <span class="hljs-string">&apos;&#x8FD8;&#x662F;&apos;</span>, <span class="hljs-string">&apos;&#x8FD9;&#x6837;&apos;</span>]
+</code></pre>
+<p><strong>&#x4F46;&#x5982;&#x679C;&#x628A;&#x8FD9;&#x6837;&#x7684;&#x8BCD;&#x8BED;&#x7279;&#x5F81;&#x7528;&#x4E8E;&#x5206;&#x7C7B;&#xFF0C;&#x4F1A;&#x51FA;&#x73B0;&#x4EC0;&#x4E48;&#x95EE;&#x9898;&#xFF1F;</strong></p>
+<p>&#x8BF7;&#x770B;&#x95EE;&#x9898;&#xFF1A;</p>
+<p><img src="../images/&#x8BCD;&#x8BED;&#x5360;&#x6BD4;.png" alt="&#x8BCD;&#x8BED;&#x5360;&#x6BD4;"></p>
+<p><strong>&#x8BE5;&#x5982;&#x4F55;&#x5904;&#x7406;&#x67D0;&#x4E2A;&#x8BCD;&#x6216;&#x77ED;&#x8BED;&#x5728;&#x591A;&#x7BC7;&#x6587;&#x7AE0;&#x4E2D;&#x51FA;&#x73B0;&#x7684;&#x6B21;&#x6570;&#x9AD8;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;</strong></p>
+<h3 id="5-tfidf&#x6587;&#x672C;&#x7279;&#x5F81;&#x63D0;&#x53D6;">5 Tf-idf&#x6587;&#x672C;&#x7279;&#x5F81;&#x63D0;&#x53D6;</h3>
+<ul>
+<li>TF-IDF&#x7684;&#x4E3B;&#x8981;&#x601D;&#x60F3;&#x662F;&#xFF1A;&#x5982;&#x679C;<strong>&#x67D0;&#x4E2A;&#x8BCD;&#x6216;&#x77ED;&#x8BED;&#x5728;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;&#x4E2D;&#x51FA;&#x73B0;&#x7684;&#x6982;&#x7387;&#x9AD8;&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x5176;&#x4ED6;&#x6587;&#x7AE0;&#x4E2D;&#x5F88;&#x5C11;&#x51FA;&#x73B0;</strong>&#xFF0C;&#x5219;&#x8BA4;&#x4E3A;&#x6B64;&#x8BCD;&#x6216;&#x8005;&#x77ED;&#x8BED;&#x5177;&#x6709;&#x5F88;&#x597D;&#x7684;&#x7C7B;&#x522B;&#x533A;&#x5206;&#x80FD;&#x529B;&#xFF0C;&#x9002;&#x5408;&#x7528;&#x6765;&#x5206;&#x7C7B;&#x3002;</li>
+<li><strong>TF-IDF&#x4F5C;&#x7528;&#xFF1A;&#x7528;&#x4EE5;&#x8BC4;&#x4F30;&#x4E00;&#x5B57;&#x8BCD;&#x5BF9;&#x4E8E;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x96C6;&#x6216;&#x4E00;&#x4E2A;&#x8BED;&#x6599;&#x5E93;&#x4E2D;&#x7684;&#x5176;&#x4E2D;&#x4E00;&#x4EFD;&#x6587;&#x4EF6;&#x7684;&#x91CD;&#x8981;&#x7A0B;&#x5EA6;&#x3002;</strong></li>
+</ul>
+<h4 id="51-&#x516C;&#x5F0F;">5.1 &#x516C;&#x5F0F;</h4>
+<ul>
+<li>&#x8BCD;&#x9891;&#xFF08;term frequency&#xFF0C;tf&#xFF09;&#x6307;&#x7684;&#x662F;&#x67D0;&#x4E00;&#x4E2A;&#x7ED9;&#x5B9A;&#x7684;&#x8BCD;&#x8BED;&#x5728;&#x8BE5;&#x6587;&#x4EF6;&#x4E2D;&#x51FA;&#x73B0;&#x7684;&#x9891;&#x7387;</li>
+<li>&#x9006;&#x5411;&#x6587;&#x6863;&#x9891;&#x7387;&#xFF08;inverse document frequency&#xFF0C;idf&#xFF09;&#x662F;&#x4E00;&#x4E2A;&#x8BCD;&#x8BED;&#x666E;&#x904D;&#x91CD;&#x8981;&#x6027;&#x7684;&#x5EA6;&#x91CF;&#x3002;&#x67D0;&#x4E00;&#x7279;&#x5B9A;&#x8BCD;&#x8BED;&#x7684;idf&#xFF0C;&#x53EF;&#x4EE5;<strong>&#x7531;&#x603B;&#x6587;&#x4EF6;&#x6570;&#x76EE;&#x9664;&#x4EE5;&#x5305;&#x542B;&#x8BE5;&#x8BCD;&#x8BED;&#x4E4B;&#x6587;&#x4EF6;&#x7684;&#x6570;&#x76EE;&#xFF0C;&#x518D;&#x5C06;&#x5F97;&#x5230;&#x7684;&#x5546;&#x53D6;&#x4EE5;10&#x4E3A;&#x5E95;&#x7684;&#x5BF9;&#x6570;&#x5F97;&#x5230;</strong></li>
+</ul>
+<p><img src="../images/tfidf&#x516C;&#x5F0F;.png" alt="tfidf&#x516C;&#x5F0F;"></p>
+<p>&#x6700;&#x7EC8;&#x5F97;&#x51FA;&#x7ED3;&#x679C;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x91CD;&#x8981;&#x7A0B;&#x5EA6;&#x3002;</p>
+<pre><code>&#x6CE8;&#xFF1A;&#x5047;&#x5982;&#x4E00;&#x7BC7;&#x6587;&#x4EF6;&#x7684;&#x603B;&#x8BCD;&#x8BED;&#x6570;&#x662F;100&#x4E2A;&#xFF0C;&#x800C;&#x8BCD;&#x8BED;&quot;&#x975E;&#x5E38;&quot;&#x51FA;&#x73B0;&#x4E86;5&#x6B21;&#xFF0C;&#x90A3;&#x4E48;&quot;&#x975E;&#x5E38;&quot;&#x4E00;&#x8BCD;&#x5728;&#x8BE5;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x8BCD;&#x9891;&#x5C31;&#x662F;5/100=0.05&#x3002;&#x800C;&#x8BA1;&#x7B97;&#x6587;&#x4EF6;&#x9891;&#x7387;&#xFF08;IDF&#xFF09;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#x4EE5;&#x6587;&#x4EF6;&#x96C6;&#x7684;&#x6587;&#x4EF6;&#x603B;&#x6570;&#xFF0C;&#x9664;&#x4EE5;&#x51FA;&#x73B0;&quot;&#x975E;&#x5E38;&quot;&#x4E00;&#x8BCD;&#x7684;&#x6587;&#x4EF6;&#x6570;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x5982;&#x679C;&quot;&#x975E;&#x5E38;&quot;&#x4E00;&#x8BCD;&#x5728;1,000&#x4EFD;&#x6587;&#x4EF6;&#x51FA;&#x73B0;&#x8FC7;&#xFF0C;&#x800C;&#x6587;&#x4EF6;&#x603B;&#x6570;&#x662F;10,000,000&#x4EFD;&#x7684;&#x8BDD;&#xFF0C;&#x5176;&#x9006;&#x5411;&#x6587;&#x4EF6;&#x9891;&#x7387;&#x5C31;&#x662F;lg&#xFF08;10,000,000 / 1,0000&#xFF09;=3&#x3002;&#x6700;&#x540E;&quot;&#x975E;&#x5E38;&quot;&#x5BF9;&#x4E8E;&#x8FD9;&#x7BC7;&#x6587;&#x6863;&#x7684;tf-idf&#x7684;&#x5206;&#x6570;&#x4E3A;0.05 * 3=0.15
+</code></pre><h4 id="52-&#x6848;&#x4F8B;">5.2 &#x6848;&#x4F8B;</h4>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> sklearn.feature_extraction.text <span class="hljs-keyword">import</span> TfidfVectorizer
+<span class="hljs-keyword">import</span> jieba
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">cut_word</span><span class="hljs-params">(text)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x5BF9;&#x4E2D;&#x6587;&#x8FDB;&#x884C;&#x5206;&#x8BCD;
+    &quot;&#x6211;&#x7231;&#x5317;&#x4EAC;&#x5929;&#x5B89;&#x95E8;&quot;&#x2014;&#x2014;&#x2014;&#x2014;&gt;&quot;&#x6211; &#x7231; &#x5317;&#x4EAC; &#x5929;&#x5B89;&#x95E8;&quot;
+    :param text:
+    :return: text
+    &quot;&quot;&quot;</span>
+    <span class="hljs-comment"># &#x7528;&#x7ED3;&#x5DF4;&#x5BF9;&#x4E2D;&#x6587;&#x5B57;&#x7B26;&#x4E32;&#x8FDB;&#x884C;&#x5206;&#x8BCD;</span>
+    text = <span class="hljs-string">&quot; &quot;</span>.join(list(jieba.cut(text)))
+
+    <span class="hljs-keyword">return</span> text
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">text_chinese_tfidf_demo</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x5BF9;&#x4E2D;&#x6587;&#x8FDB;&#x884C;&#x7279;&#x5F81;&#x62BD;&#x53D6;
+    :return: None
+    &quot;&quot;&quot;</span>
+    data = [<span class="hljs-string">&quot;&#x4E00;&#x79CD;&#x8FD8;&#x662F;&#x4E00;&#x79CD;&#x4ECA;&#x5929;&#x5F88;&#x6B8B;&#x9177;&#xFF0C;&#x660E;&#x5929;&#x66F4;&#x6B8B;&#x9177;&#xFF0C;&#x540E;&#x5929;&#x5F88;&#x7F8E;&#x597D;&#xFF0C;&#x4F46;&#x7EDD;&#x5BF9;&#x5927;&#x90E8;&#x5206;&#x662F;&#x6B7B;&#x5728;&#x660E;&#x5929;&#x665A;&#x4E0A;&#xFF0C;&#x6240;&#x4EE5;&#x6BCF;&#x4E2A;&#x4EBA;&#x4E0D;&#x8981;&#x653E;&#x5F03;&#x4ECA;&#x5929;&#x3002;&quot;</span>,
+            <span class="hljs-string">&quot;&#x6211;&#x4EEC;&#x770B;&#x5230;&#x7684;&#x4ECE;&#x5F88;&#x8FDC;&#x661F;&#x7CFB;&#x6765;&#x7684;&#x5149;&#x662F;&#x5728;&#x51E0;&#x767E;&#x4E07;&#x5E74;&#x4E4B;&#x524D;&#x53D1;&#x51FA;&#x7684;&#xFF0C;&#x8FD9;&#x6837;&#x5F53;&#x6211;&#x4EEC;&#x770B;&#x5230;&#x5B87;&#x5B99;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x662F;&#x5728;&#x770B;&#x5B83;&#x7684;&#x8FC7;&#x53BB;&#x3002;&quot;</span>,
+            <span class="hljs-string">&quot;&#x5982;&#x679C;&#x53EA;&#x7528;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#x4E86;&#x89E3;&#x67D0;&#x6837;&#x4E8B;&#x7269;&#xFF0C;&#x4F60;&#x5C31;&#x4E0D;&#x4F1A;&#x771F;&#x6B63;&#x4E86;&#x89E3;&#x5B83;&#x3002;&#x4E86;&#x89E3;&#x4E8B;&#x7269;&#x771F;&#x6B63;&#x542B;&#x4E49;&#x7684;&#x79D8;&#x5BC6;&#x53D6;&#x51B3;&#x4E8E;&#x5982;&#x4F55;&#x5C06;&#x5176;&#x4E0E;&#x6211;&#x4EEC;&#x6240;&#x4E86;&#x89E3;&#x7684;&#x4E8B;&#x7269;&#x76F8;&#x8054;&#x7CFB;&#x3002;&quot;</span>]
+    <span class="hljs-comment"># &#x5C06;&#x539F;&#x59CB;&#x6570;&#x636E;&#x8F6C;&#x6362;&#x6210;&#x5206;&#x597D;&#x8BCD;&#x7684;&#x5F62;&#x5F0F;</span>
+    text_list = []
+    <span class="hljs-keyword">for</span> sent <span class="hljs-keyword">in</span> data:
+        text_list.append(cut_word(sent))
+    print(text_list)
+
+    <span class="hljs-comment"># 1&#x3001;&#x5B9E;&#x4F8B;&#x5316;&#x4E00;&#x4E2A;&#x8F6C;&#x6362;&#x5668;&#x7C7B;</span>
+    <span class="hljs-comment"># transfer = CountVectorizer(sparse=False)</span>
+    transfer = TfidfVectorizer(stop_words=[<span class="hljs-string">&apos;&#x4E00;&#x79CD;&apos;</span>, <span class="hljs-string">&apos;&#x4E0D;&#x4F1A;&apos;</span>, <span class="hljs-string">&apos;&#x4E0D;&#x8981;&apos;</span>])
+    <span class="hljs-comment"># 2&#x3001;&#x8C03;&#x7528;fit_transform</span>
+    data = transfer.fit_transform(text_list)
+    print(<span class="hljs-string">&quot;&#x6587;&#x672C;&#x7279;&#x5F81;&#x62BD;&#x53D6;&#x7684;&#x7ED3;&#x679C;&#xFF1A;\n&quot;</span>, data.toarray())
+    print(<span class="hljs-string">&quot;&#x8FD4;&#x56DE;&#x7279;&#x5F81;&#x540D;&#x5B57;&#xFF1A;\n&quot;</span>, transfer.get_feature_names())
+
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">None</span>
+</code></pre>
+<p>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-python">Building prefix dict <span class="hljs-keyword">from</span> the default dictionary ...
+Loading model <span class="hljs-keyword">from</span> cache /var/folders/mz/tzf2l3sx4rgg6qpglfb035_r0000gn/T/jieba.cache
+Loading model cost <span class="hljs-number">0.856</span> seconds.
+Prefix dict has been built succesfully.
+[<span class="hljs-string">&apos;&#x4E00;&#x79CD; &#x8FD8;&#x662F; &#x4E00;&#x79CD; &#x4ECA;&#x5929; &#x5F88; &#x6B8B;&#x9177; &#xFF0C; &#x660E;&#x5929; &#x66F4; &#x6B8B;&#x9177; &#xFF0C; &#x540E;&#x5929; &#x5F88; &#x7F8E;&#x597D; &#xFF0C; &#x4F46; &#x7EDD;&#x5BF9; &#x5927;&#x90E8;&#x5206; &#x662F; &#x6B7B; &#x5728; &#x660E;&#x5929; &#x665A;&#x4E0A; &#xFF0C; &#x6240;&#x4EE5; &#x6BCF;&#x4E2A; &#x4EBA; &#x4E0D;&#x8981; &#x653E;&#x5F03; &#x4ECA;&#x5929; &#x3002;&apos;</span>, <span class="hljs-string">&apos;&#x6211;&#x4EEC; &#x770B;&#x5230; &#x7684; &#x4ECE; &#x5F88; &#x8FDC; &#x661F;&#x7CFB; &#x6765; &#x7684; &#x5149;&#x662F;&#x5728; &#x51E0;&#x767E;&#x4E07;&#x5E74; &#x4E4B;&#x524D; &#x53D1;&#x51FA; &#x7684; &#xFF0C; &#x8FD9;&#x6837; &#x5F53; &#x6211;&#x4EEC; &#x770B;&#x5230; &#x5B87;&#x5B99; &#x65F6; &#xFF0C; &#x6211;&#x4EEC; &#x662F; &#x5728; &#x770B; &#x5B83; &#x7684; &#x8FC7;&#x53BB; &#x3002;&apos;</span>, <span class="hljs-string">&apos;&#x5982;&#x679C; &#x53EA;&#x7528; &#x4E00;&#x79CD; &#x65B9;&#x5F0F; &#x4E86;&#x89E3; &#x67D0;&#x6837; &#x4E8B;&#x7269; &#xFF0C; &#x4F60; &#x5C31; &#x4E0D;&#x4F1A; &#x771F;&#x6B63; &#x4E86;&#x89E3; &#x5B83; &#x3002; &#x4E86;&#x89E3; &#x4E8B;&#x7269; &#x771F;&#x6B63; &#x542B;&#x4E49; &#x7684; &#x79D8;&#x5BC6; &#x53D6;&#x51B3;&#x4E8E; &#x5982;&#x4F55; &#x5C06; &#x5176; &#x4E0E; &#x6211;&#x4EEC; &#x6240; &#x4E86;&#x89E3; &#x7684; &#x4E8B;&#x7269; &#x76F8; &#x8054;&#x7CFB; &#x3002;&apos;</span>]
+&#x6587;&#x672C;&#x7279;&#x5F81;&#x62BD;&#x53D6;&#x7684;&#x7ED3;&#x679C;&#xFF1A;
+ [[ <span class="hljs-number">0.</span>          <span class="hljs-number">0.</span>          <span class="hljs-number">0.</span>          <span class="hljs-number">0.43643578</span>  <span class="hljs-number">0.</span>          <span class="hljs-number">0.</span>          <span class="hljs-number">0.</span>
+   <span class="hljs-number">0.</span>          <span class="hljs-number">0.</span>          <span class="hljs-number">0.21821789</span>  <span class="hljs-number">0.</span>          <span class="hljs-number">0.21821789</span>  <span class="hljs-number">0.</span>          <span class="hljs-number">0.</span>
+   <span class="hljs-number">0.</span>          <span class="hljs-number">0.</span>          <span class="hljs-number">0.21821789</span>  <span class="hljs-number">0.21821789</span>  <span class="hljs-number">0.</span>          <span class="hljs-number">0.43643578</span>
+   <span class="hljs-number">0.</span>          <span class="hljs-number">0.21821789</span>  <span class="hljs-number">0.</span>          <span class="hljs-number">0.43643578</span>  <span class="hljs-number">0.21821789</span>  <span class="hljs-number">0.</span>          <span class="hljs-number">0.</span>
+   <span class="hljs-number">0.</span>          <span class="hljs-number">0.21821789</span>  <span class="hljs-number">0.21821789</span>  <span class="hljs-number">0.</span>          <span class="hljs-number">0.</span>          <span class="hljs-number">0.21821789</span>
+   <span class="hljs-number">0.</span>        ]
+ [ <span class="hljs-number">0.2410822</span>   <span class="hljs-number">0.</span>          <span class="hljs-number">0.</span>          <span class="hljs-number">0.</span>          <span class="hljs-number">0.2410822</span>   <span class="hljs-number">0.2410822</span>
+   <span class="hljs-number">0.2410822</span>   <span class="hljs-number">0.</span>          <span class="hljs-number">0.</span>          <span class="hljs-number">0.</span>          <span class="hljs-number">0.</span>          <span class="hljs-number">0.</span>          <span class="hljs-number">0.</span>
+   <span class="hljs-number">0.</span>          <span class="hljs-number">0.2410822</span>   <span class="hljs-number">0.55004769</span>  <span class="hljs-number">0.</span>          <span class="hljs-number">0.</span>          <span class="hljs-number">0.</span>          <span class="hljs-number">0.</span>
+   <span class="hljs-number">0.2410822</span>   <span class="hljs-number">0.</span>          <span class="hljs-number">0.</span>          <span class="hljs-number">0.</span>          <span class="hljs-number">0.</span>          <span class="hljs-number">0.48216441</span>
+   <span class="hljs-number">0.</span>          <span class="hljs-number">0.</span>          <span class="hljs-number">0.</span>          <span class="hljs-number">0.</span>          <span class="hljs-number">0.</span>          <span class="hljs-number">0.2410822</span>
+   <span class="hljs-number">0.</span>          <span class="hljs-number">0.2410822</span> ]
+ [ <span class="hljs-number">0.</span>          <span class="hljs-number">0.644003</span>    <span class="hljs-number">0.48300225</span>  <span class="hljs-number">0.</span>          <span class="hljs-number">0.</span>          <span class="hljs-number">0.</span>          <span class="hljs-number">0.</span>
+   <span class="hljs-number">0.16100075</span>  <span class="hljs-number">0.16100075</span>  <span class="hljs-number">0.</span>          <span class="hljs-number">0.16100075</span>  <span class="hljs-number">0.</span>          <span class="hljs-number">0.16100075</span>
+   <span class="hljs-number">0.16100075</span>  <span class="hljs-number">0.</span>          <span class="hljs-number">0.12244522</span>  <span class="hljs-number">0.</span>          <span class="hljs-number">0.</span>          <span class="hljs-number">0.16100075</span>
+   <span class="hljs-number">0.</span>          <span class="hljs-number">0.</span>          <span class="hljs-number">0.</span>          <span class="hljs-number">0.16100075</span>  <span class="hljs-number">0.</span>          <span class="hljs-number">0.</span>          <span class="hljs-number">0.</span>
+   <span class="hljs-number">0.3220015</span>   <span class="hljs-number">0.16100075</span>  <span class="hljs-number">0.</span>          <span class="hljs-number">0.</span>          <span class="hljs-number">0.16100075</span>  <span class="hljs-number">0.</span>          <span class="hljs-number">0.</span>
+   <span class="hljs-number">0.</span>        ]]
+&#x8FD4;&#x56DE;&#x7279;&#x5F81;&#x540D;&#x5B57;&#xFF1A;
+ [<span class="hljs-string">&apos;&#x4E4B;&#x524D;&apos;</span>, <span class="hljs-string">&apos;&#x4E86;&#x89E3;&apos;</span>, <span class="hljs-string">&apos;&#x4E8B;&#x7269;&apos;</span>, <span class="hljs-string">&apos;&#x4ECA;&#x5929;&apos;</span>, <span class="hljs-string">&apos;&#x5149;&#x662F;&#x5728;&apos;</span>, <span class="hljs-string">&apos;&#x51E0;&#x767E;&#x4E07;&#x5E74;&apos;</span>, <span class="hljs-string">&apos;&#x53D1;&#x51FA;&apos;</span>, <span class="hljs-string">&apos;&#x53D6;&#x51B3;&#x4E8E;&apos;</span>, <span class="hljs-string">&apos;&#x53EA;&#x7528;&apos;</span>, <span class="hljs-string">&apos;&#x540E;&#x5929;&apos;</span>, <span class="hljs-string">&apos;&#x542B;&#x4E49;&apos;</span>, <span class="hljs-string">&apos;&#x5927;&#x90E8;&#x5206;&apos;</span>, <span class="hljs-string">&apos;&#x5982;&#x4F55;&apos;</span>, <span class="hljs-string">&apos;&#x5982;&#x679C;&apos;</span>, <span class="hljs-string">&apos;&#x5B87;&#x5B99;&apos;</span>, <span class="hljs-string">&apos;&#x6211;&#x4EEC;&apos;</span>, <span class="hljs-string">&apos;&#x6240;&#x4EE5;&apos;</span>, <span class="hljs-string">&apos;&#x653E;&#x5F03;&apos;</span>, <span class="hljs-string">&apos;&#x65B9;&#x5F0F;&apos;</span>, <span class="hljs-string">&apos;&#x660E;&#x5929;&apos;</span>, <span class="hljs-string">&apos;&#x661F;&#x7CFB;&apos;</span>, <span class="hljs-string">&apos;&#x665A;&#x4E0A;&apos;</span>, <span class="hljs-string">&apos;&#x67D0;&#x6837;&apos;</span>, <span class="hljs-string">&apos;&#x6B8B;&#x9177;&apos;</span>, <span class="hljs-string">&apos;&#x6BCF;&#x4E2A;&apos;</span>, <span class="hljs-string">&apos;&#x770B;&#x5230;&apos;</span>, <span class="hljs-string">&apos;&#x771F;&#x6B63;&apos;</span>, <span class="hljs-string">&apos;&#x79D8;&#x5BC6;&apos;</span>, <span class="hljs-string">&apos;&#x7EDD;&#x5BF9;&apos;</span>, <span class="hljs-string">&apos;&#x7F8E;&#x597D;&apos;</span>, <span class="hljs-string">&apos;&#x8054;&#x7CFB;&apos;</span>, <span class="hljs-string">&apos;&#x8FC7;&#x53BB;&apos;</span>, <span class="hljs-string">&apos;&#x8FD8;&#x662F;&apos;</span>, <span class="hljs-string">&apos;&#x8FD9;&#x6837;&apos;</span>]
+</code></pre>
+<h3 id="6-tfidf&#x7684;&#x91CD;&#x8981;&#x6027;">6 Tf-idf&#x7684;&#x91CD;&#x8981;&#x6027;</h3>
+<p><strong>&#x5206;&#x7C7B;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x7B97;&#x6CD5;&#x8FDB;&#x884C;&#x6587;&#x7AE0;&#x5206;&#x7C7B;&#x4E2D;&#x524D;&#x671F;&#x6570;&#x636E;&#x5904;&#x7406;&#x65B9;&#x5F0F;</strong></p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../day01/section1.html" class="navigation navigation-prev " aria-label="Previous page: 特征工程介绍"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../day01/section3.html" class="navigation navigation-next " aria-label="Next page: 特征预处理"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"katex":{},"expandable-chapters-small":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

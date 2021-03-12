@@ -1,0 +1,755 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>模型保存和加载 | 机器学习算法课程定位、目标</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-katex/katex.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../day03/section6.html" />
+    
+    
+    <link rel="prev" href="../day03/section4.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="4.5"
+        data-chapter-title="模型保存和加载"
+        data-filepath="day03/section5.md"
+        data-basepath=".."
+        data-revision="Sat Jun 23 2018 19:16:24 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        机器学习课程
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="ml/index.html">
+            
+                
+                    <a href="../ml/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        机器学习概述
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="ml/section0.html">
+            
+                
+                    <a href="../ml/section0.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        人工智能概述
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="ml/section1.html">
+            
+                
+                    <a href="../ml/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        什么是机器学习
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="ml/section2.html">
+            
+                
+                    <a href="../ml/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        机器学习算法分类
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="ml/section3.html">
+            
+                
+                    <a href="../ml/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        机器学习开发流程
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="ml/section4.html">
+            
+                
+                    <a href="../ml/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        学习框架和资料介绍
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="day01/index.html">
+            
+                
+                    <a href="../day01/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        特征工程
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="day01/section0.html">
+            
+                
+                    <a href="../day01/section0.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        数据集
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="day01/section1.html">
+            
+                
+                    <a href="../day01/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        特征工程介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="day01/section2.html">
+            
+                
+                    <a href="../day01/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        特征抽取
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="day01/section3.html">
+            
+                
+                    <a href="../day01/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        特征预处理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="day01/section4.html">
+            
+                
+                    <a href="../day01/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        特征降维
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="day01/section5.html">
+            
+                
+                    <a href="../day01/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        主成分分析
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="day01/section6.html">
+            
+                
+                    <a href="../day01/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.</b>
+                        
+                        总结
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="day01/section7.html">
+            
+                
+                    <a href="../day01/section7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.8.</b>
+                        
+                        每日作业
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="day02/index.html">
+            
+                
+                    <a href="../day02/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        分类算法
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="day02/section1.html">
+            
+                
+                    <a href="../day02/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        数据集介绍与划分
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="day02/section2.html">
+            
+                
+                    <a href="../day02/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        sklearn转换器和估计器
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="day02/section3.html">
+            
+                
+                    <a href="../day02/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        K-近邻算法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="day02/section4.html">
+            
+                
+                    <a href="../day02/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        模型选择与调优
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="day02/section5.html">
+            
+                
+                    <a href="../day02/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        朴素贝叶斯算法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="day02/section6.html">
+            
+                
+                    <a href="../day02/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        决策树
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="day02/section7.html">
+            
+                
+                    <a href="../day02/section7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.</b>
+                        
+                        集成学习方法之随机森林
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="day02/section8.html">
+            
+                
+                    <a href="../day02/section8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.8.</b>
+                        
+                        总结
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="day02/section9.html">
+            
+                
+                    <a href="../day02/section9.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.9.</b>
+                        
+                        每日作业
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="day03/index.html">
+            
+                
+                    <a href="../day03/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        回归与聚类算法
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="day03/section1.html">
+            
+                
+                    <a href="../day03/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        线性回归
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="day03/section2.html">
+            
+                
+                    <a href="../day03/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        欠拟合与过拟合
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="day03/section3.html">
+            
+                
+                    <a href="../day03/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        线性回归的改进-岭回归
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="day03/section4.html">
+            
+                
+                    <a href="../day03/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        分类算法-逻辑回归与二分类
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.5" data-path="day03/section5.html">
+            
+                
+                    <a href="../day03/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        模型保存和加载
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="day03/section6.html">
+            
+                
+                    <a href="../day03/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        无监督学习-K-means算法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="day03/section7.html">
+            
+                
+                    <a href="../day03/section7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.7.</b>
+                        
+                        总结
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="day03/section8.html">
+            
+                
+                    <a href="../day03/section8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.8.</b>
+                        
+                        每日作业
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >机器学习算法课程定位、目标</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="&#x6A21;&#x578B;&#x4FDD;&#x5B58;&#x548C;&#x52A0;&#x8F7D;">&#x6A21;&#x578B;&#x4FDD;&#x5B58;&#x548C;&#x52A0;&#x8F7D;</h1>
+<h2 id="&#x5B66;&#x4E60;&#x76EE;&#x6807;">&#x5B66;&#x4E60;&#x76EE;&#x6807;</h2>
+<ul>
+<li>&#x76EE;&#x6807;<ul>
+<li>&#x5E94;&#x7528;joblib&#x5B9E;&#x73B0;&#x6A21;&#x578B;&#x7684;&#x4FDD;&#x5B58;&#x4E0E;&#x52A0;&#x8F7D; </li>
+</ul>
+</li>
+<li>&#x5E94;&#x7528;<ul>
+<li>&#x65E0;</li>
+</ul>
+</li>
+</ul>
+<p>&#x5F53;&#x8BAD;&#x7EC3;&#x6216;&#x8005;&#x8BA1;&#x7B97;&#x597D;&#x4E00;&#x4E2A;&#x6A21;&#x578B;&#x4E4B;&#x540E;&#xFF0C;&#x90A3;&#x4E48;&#x5982;&#x679C;&#x522B;&#x4EBA;&#x9700;&#x8981;&#x6211;&#x4EEC;&#x63D0;&#x4F9B;&#x7ED3;&#x679C;&#x9884;&#x6D4B;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x4FDD;&#x5B58;&#x6A21;&#x578B;&#xFF08;&#x4E3B;&#x8981;&#x662F;&#x4FDD;&#x5B58;&#x7B97;&#x6CD5;&#x7684;&#x53C2;&#x6570;&#xFF09;</p>
+<h2 id="1&#x3001;sklearn&#x6A21;&#x578B;&#x7684;&#x4FDD;&#x5B58;&#x548C;&#x52A0;&#x8F7D;api">1&#x3001;sklearn&#x6A21;&#x578B;&#x7684;&#x4FDD;&#x5B58;&#x548C;&#x52A0;&#x8F7D;API</h2>
+<ul>
+<li>from sklearn.externals import joblib <ul>
+<li>&#x4FDD;&#x5B58;&#xFF1A;joblib.dump(rf, &apos;test.pkl&apos;)</li>
+<li>&#x52A0;&#x8F7D;&#xFF1A;estimator = joblib.load(&apos;test.pkl&apos;)</li>
+</ul>
+</li>
+</ul>
+<h2 id="2&#x3001;&#x7EBF;&#x6027;&#x56DE;&#x5F52;&#x7684;&#x6A21;&#x578B;&#x4FDD;&#x5B58;&#x52A0;&#x8F7D;&#x6848;&#x4F8B;">2&#x3001;&#x7EBF;&#x6027;&#x56DE;&#x5F52;&#x7684;&#x6A21;&#x578B;&#x4FDD;&#x5B58;&#x52A0;&#x8F7D;&#x6848;&#x4F8B;</h2>
+<ul>
+<li>&#x4FDD;&#x5B58;</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x4F7F;&#x7528;&#x7EBF;&#x6027;&#x6A21;&#x578B;&#x8FDB;&#x884C;&#x9884;&#x6D4B;</span>
+<span class="hljs-comment"># &#x4F7F;&#x7528;&#x6B63;&#x89C4;&#x65B9;&#x7A0B;&#x6C42;&#x89E3;</span>
+lr = LinearRegression()
+<span class="hljs-comment"># &#x6B64;&#x65F6;&#x5728;&#x5E72;&#x4EC0;&#x4E48;&#xFF1F;</span>
+lr.fit(x_train, y_train)
+<span class="hljs-comment"># &#x4FDD;&#x5B58;&#x8BAD;&#x7EC3;&#x5B8C;&#x7ED3;&#x675F;&#x7684;&#x6A21;&#x578B;</span>
+joblib.dump(lr, <span class="hljs-string">&quot;test.pkl&quot;</span>)
+</code></pre>
+<ul>
+<li>&#x52A0;&#x8F7D;</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x901A;&#x8FC7;&#x5DF2;&#x6709;&#x7684;&#x6A21;&#x578B;&#x53BB;&#x9884;&#x6D4B;&#x623F;&#x4EF7;</span>
+model = joblib.load(<span class="hljs-string">&quot;test.pkl&quot;</span>)
+print(<span class="hljs-string">&quot;&#x4ECE;&#x6587;&#x4EF6;&#x52A0;&#x8F7D;&#x8FDB;&#x6765;&#x7684;&#x6A21;&#x578B;&#x9884;&#x6D4B;&#x623F;&#x4EF7;&#x7684;&#x7ED3;&#x679C;&#xFF1A;&quot;</span>, std_y.inverse_transform(model.predict(x_test)))
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../day03/section4.html" class="navigation navigation-prev " aria-label="Previous page: 分类算法-逻辑回归与二分类"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../day03/section6.html" class="navigation navigation-next " aria-label="Next page: 无监督学习-K-means算法"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"katex":{},"expandable-chapters-small":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

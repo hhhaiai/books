@@ -1,0 +1,878 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>主成分分析 | 机器学习算法课程定位、目标</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-katex/katex.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../day01/section6.html" />
+    
+    
+    <link rel="prev" href="../day01/section4.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="2.6"
+        data-chapter-title="主成分分析"
+        data-filepath="day01/section5.md"
+        data-basepath=".."
+        data-revision="Sat Jun 23 2018 19:16:24 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        机器学习课程
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="ml/index.html">
+            
+                
+                    <a href="../ml/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        机器学习概述
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="ml/section0.html">
+            
+                
+                    <a href="../ml/section0.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        人工智能概述
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="ml/section1.html">
+            
+                
+                    <a href="../ml/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        什么是机器学习
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="ml/section2.html">
+            
+                
+                    <a href="../ml/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        机器学习算法分类
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="ml/section3.html">
+            
+                
+                    <a href="../ml/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        机器学习开发流程
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="ml/section4.html">
+            
+                
+                    <a href="../ml/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        学习框架和资料介绍
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="day01/index.html">
+            
+                
+                    <a href="../day01/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        特征工程
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="day01/section0.html">
+            
+                
+                    <a href="../day01/section0.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        数据集
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="day01/section1.html">
+            
+                
+                    <a href="../day01/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        特征工程介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="day01/section2.html">
+            
+                
+                    <a href="../day01/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        特征抽取
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="day01/section3.html">
+            
+                
+                    <a href="../day01/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        特征预处理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="day01/section4.html">
+            
+                
+                    <a href="../day01/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        特征降维
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.6" data-path="day01/section5.html">
+            
+                
+                    <a href="../day01/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        主成分分析
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="day01/section6.html">
+            
+                
+                    <a href="../day01/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.</b>
+                        
+                        总结
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="day01/section7.html">
+            
+                
+                    <a href="../day01/section7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.8.</b>
+                        
+                        每日作业
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="day02/index.html">
+            
+                
+                    <a href="../day02/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        分类算法
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="day02/section1.html">
+            
+                
+                    <a href="../day02/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        数据集介绍与划分
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="day02/section2.html">
+            
+                
+                    <a href="../day02/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        sklearn转换器和估计器
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="day02/section3.html">
+            
+                
+                    <a href="../day02/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        K-近邻算法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="day02/section4.html">
+            
+                
+                    <a href="../day02/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        模型选择与调优
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="day02/section5.html">
+            
+                
+                    <a href="../day02/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        朴素贝叶斯算法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="day02/section6.html">
+            
+                
+                    <a href="../day02/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        决策树
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="day02/section7.html">
+            
+                
+                    <a href="../day02/section7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.</b>
+                        
+                        集成学习方法之随机森林
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="day02/section8.html">
+            
+                
+                    <a href="../day02/section8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.8.</b>
+                        
+                        总结
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="day02/section9.html">
+            
+                
+                    <a href="../day02/section9.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.9.</b>
+                        
+                        每日作业
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="day03/index.html">
+            
+                
+                    <a href="../day03/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        回归与聚类算法
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="day03/section1.html">
+            
+                
+                    <a href="../day03/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        线性回归
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="day03/section2.html">
+            
+                
+                    <a href="../day03/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        欠拟合与过拟合
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="day03/section3.html">
+            
+                
+                    <a href="../day03/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        线性回归的改进-岭回归
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="day03/section4.html">
+            
+                
+                    <a href="../day03/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        分类算法-逻辑回归与二分类
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="day03/section5.html">
+            
+                
+                    <a href="../day03/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        模型保存和加载
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="day03/section6.html">
+            
+                
+                    <a href="../day03/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        无监督学习-K-means算法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="day03/section7.html">
+            
+                
+                    <a href="../day03/section7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.7.</b>
+                        
+                        总结
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="day03/section8.html">
+            
+                
+                    <a href="../day03/section8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.8.</b>
+                        
+                        每日作业
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >机器学习算法课程定位、目标</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="26-&#x4E3B;&#x6210;&#x5206;&#x5206;&#x6790;">2.6 &#x4E3B;&#x6210;&#x5206;&#x5206;&#x6790;</h1>
+<h2 id="&#x5B66;&#x4E60;&#x76EE;&#x6807;">&#x5B66;&#x4E60;&#x76EE;&#x6807;</h2>
+<ul>
+<li>&#x76EE;&#x6807;<ul>
+<li>&#x5E94;&#x7528;PCA&#x5B9E;&#x73B0;&#x7279;&#x5F81;&#x7684;&#x964D;&#x7EF4;</li>
+</ul>
+</li>
+<li>&#x5E94;&#x7528;<ul>
+<li>&#x7528;&#x6237;&#x4E0E;&#x7269;&#x54C1;&#x7C7B;&#x522B;&#x4E4B;&#x95F4;&#x4E3B;&#x6210;&#x5206;&#x5206;&#x6790;</li>
+</ul>
+</li>
+</ul>
+<h2 id="261-&#x4EC0;&#x4E48;&#x662F;&#x4E3B;&#x6210;&#x5206;&#x5206;&#x6790;pca">2.6.1 &#x4EC0;&#x4E48;&#x662F;&#x4E3B;&#x6210;&#x5206;&#x5206;&#x6790;(PCA)</h2>
+<ul>
+<li><p>&#x5B9A;&#x4E49;&#xFF1A;<strong>&#x9AD8;&#x7EF4;&#x6570;&#x636E;&#x8F6C;&#x5316;&#x4E3A;&#x4F4E;&#x7EF4;&#x6570;&#x636E;&#x7684;&#x8FC7;&#x7A0B;</strong>&#xFF0C;&#x5728;&#x6B64;&#x8FC7;&#x7A0B;&#x4E2D;<strong>&#x53EF;&#x80FD;&#x4F1A;&#x820D;&#x5F03;&#x539F;&#x6709;&#x6570;&#x636E;&#x3001;&#x521B;&#x9020;&#x65B0;&#x7684;&#x53D8;&#x91CF;</strong></p>
+</li>
+<li><p>&#x4F5C;&#x7528;&#xFF1A;<strong>&#x662F;&#x6570;&#x636E;&#x7EF4;&#x6570;&#x538B;&#x7F29;&#xFF0C;&#x5C3D;&#x53EF;&#x80FD;&#x964D;&#x4F4E;&#x539F;&#x6570;&#x636E;&#x7684;&#x7EF4;&#x6570;&#xFF08;&#x590D;&#x6742;&#x5EA6;&#xFF09;&#xFF0C;&#x635F;&#x5931;&#x5C11;&#x91CF;&#x4FE1;&#x606F;&#x3002;</strong> </p>
+</li>
+<li>&#x5E94;&#x7528;&#xFF1A;&#x56DE;&#x5F52;&#x5206;&#x6790;&#x6216;&#x8005;&#x805A;&#x7C7B;&#x5206;&#x6790;&#x5F53;&#x4E2D; </li>
+</ul>
+<blockquote>
+<p>&#x5BF9;&#x4E8E;&#x4FE1;&#x606F;&#x4E00;&#x8BCD;&#xFF0C;&#x5728;&#x51B3;&#x7B56;&#x6811;&#x4E2D;&#x4F1A;&#x8FDB;&#x884C;&#x4ECB;&#x7ECD;</p>
+</blockquote>
+<p>&#x90A3;&#x4E48;&#x66F4;&#x597D;&#x7684;&#x7406;&#x89E3;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x5462;&#xFF1F;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x4E00;&#x5F20;&#x56FE;</p>
+<p><img src="../images/PCA&#x89E3;&#x91CA;&#x56FE;.png" alt="PCA&#x89E3;&#x91CA;&#x56FE;"></p>
+<h3 id="1-&#x8BA1;&#x7B97;&#x6848;&#x4F8B;&#x7406;&#x89E3;&#x4E86;&#x89E3;&#xFF0C;&#x65E0;&#x9700;&#x8BB0;&#x5FC6;">1 &#x8BA1;&#x7B97;&#x6848;&#x4F8B;&#x7406;&#x89E3;(&#x4E86;&#x89E3;&#xFF0C;&#x65E0;&#x9700;&#x8BB0;&#x5FC6;)</h3>
+<p>&#x5047;&#x8BBE;&#x5BF9;&#x4E8E;&#x7ED9;&#x5B9A;5&#x4E2A;&#x70B9;&#xFF0C;&#x6570;&#x636E;&#x5982;&#x4E0B;</p>
+<pre><code>(-1,-2)
+(-1, 0)
+( 0, 0)
+( 2, 1)
+( 0, 1)
+</code></pre><p><img src="../images/PCA&#x8BA1;&#x7B97;&#x56FE;.png" alt="PCA&#x8BA1;&#x7B97;&#x56FE;"></p>
+<p>&#x8981;&#x6C42;&#xFF1A;&#x5C06;&#x8FD9;&#x4E2A;&#x4E8C;&#x7EF4;&#x7684;&#x6570;&#x636E;&#x7B80;&#x5316;&#x6210;&#x4E00;&#x7EF4;&#xFF1F; &#x5E76;&#x4E14;&#x635F;&#x5931;&#x5C11;&#x91CF;&#x7684;&#x4FE1;&#x606F;</p>
+<p><img src="../images/PCA&#x5750;&#x6807;&#x8F74;&#x7ED3;&#x679C;.png" alt="PCA&#x5750;&#x6807;&#x8F74;&#x7ED3;&#x679C;"></p>
+<p>&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x5982;&#x4F55;&#x8BA1;&#x7B97;&#x7684;&#x5462;&#xFF1F;<strong>&#x627E;&#x5230;&#x4E00;&#x4E2A;&#x5408;&#x9002;&#x7684;&#x76F4;&#x7EBF;&#xFF0C;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x77E9;&#x9635;&#x8FD0;&#x7B97;&#x5F97;&#x51FA;&#x4E3B;&#x6210;&#x5206;&#x5206;&#x6790;&#x7684;&#x7ED3;&#x679C;&#xFF08;&#x4E0D;&#x9700;&#x8981;&#x7406;&#x89E3;&#xFF09;</strong></p>
+<p><img src="../images/PCA&#x8FD0;&#x7B97;&#x8FC7;&#x7A0B;.png" alt="PCA&#x8FD0;&#x7B97;&#x8FC7;&#x7A0B;"></p>
+<h3 id="2-api">2 API</h3>
+<ul>
+<li>sklearn.decomposition.PCA(n_components=None)<ul>
+<li>&#x5C06;&#x6570;&#x636E;&#x5206;&#x89E3;&#x4E3A;&#x8F83;&#x4F4E;&#x7EF4;&#x6570;&#x7A7A;&#x95F4; </li>
+<li>n_components:<ul>
+<li><strong>&#x5C0F;&#x6570;&#xFF1A;&#x8868;&#x793A;&#x4FDD;&#x7559;&#x767E;&#x5206;&#x4E4B;&#x591A;&#x5C11;&#x7684;&#x4FE1;&#x606F;</strong></li>
+<li><strong>&#x6574;&#x6570;&#xFF1A;&#x51CF;&#x5C11;&#x5230;&#x591A;&#x5C11;&#x7279;&#x5F81;</strong></li>
+</ul>
+</li>
+<li>PCA.fit_transform(X)     X:numpy array&#x683C;&#x5F0F;&#x7684;&#x6570;&#x636E;[n_samples,n_features]</li>
+<li>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x8F6C;&#x6362;&#x540E;&#x6307;&#x5B9A;&#x7EF4;&#x5EA6;&#x7684;array</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-&#x6570;&#x636E;&#x8BA1;&#x7B97;">3 &#x6570;&#x636E;&#x8BA1;&#x7B97;</h3>
+<p>&#x5148;&#x62FF;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x6570;&#x636E;&#x8BA1;&#x7B97;&#x4E00;&#x4E0B;</p>
+<pre><code class="lang-python">[[<span class="hljs-number">2</span>,<span class="hljs-number">8</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>],
+[<span class="hljs-number">6</span>,<span class="hljs-number">3</span>,<span class="hljs-number">0</span>,<span class="hljs-number">8</span>],
+[<span class="hljs-number">5</span>,<span class="hljs-number">4</span>,<span class="hljs-number">9</span>,<span class="hljs-number">1</span>]]
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> sklearn.decomposition <span class="hljs-keyword">import</span> PCA
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">pca_demo</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;PCA&#x964D;&#x7EF4;
+    :return: None
+    &quot;&quot;&quot;</span>
+    data = [[<span class="hljs-number">2</span>,<span class="hljs-number">8</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>], [<span class="hljs-number">6</span>,<span class="hljs-number">3</span>,<span class="hljs-number">0</span>,<span class="hljs-number">8</span>], [<span class="hljs-number">5</span>,<span class="hljs-number">4</span>,<span class="hljs-number">9</span>,<span class="hljs-number">1</span>]]
+
+    <span class="hljs-comment"># 1&#x3001;&#x5B9E;&#x4F8B;&#x5316;PCA, &#x5C0F;&#x6570;&#x2014;&#x2014;&#x4FDD;&#x7559;&#x591A;&#x5C11;&#x4FE1;&#x606F;</span>
+    transfer = PCA(n_components=<span class="hljs-number">0.9</span>)
+    <span class="hljs-comment"># 2&#x3001;&#x8C03;&#x7528;fit_transform</span>
+    data1 = transfer.fit_transform(data)
+
+    print(<span class="hljs-string">&quot;&#x4FDD;&#x7559;90%&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x964D;&#x7EF4;&#x7ED3;&#x679C;&#x4E3A;&#xFF1A;\n&quot;</span>, data1)
+
+    <span class="hljs-comment"># 1&#x3001;&#x5B9E;&#x4F8B;&#x5316;PCA, &#x6574;&#x6570;&#x2014;&#x2014;&#x6307;&#x5B9A;&#x964D;&#x7EF4;&#x5230;&#x7684;&#x7EF4;&#x6570;</span>
+    transfer2 = PCA(n_components=<span class="hljs-number">3</span>)
+    <span class="hljs-comment"># 2&#x3001;&#x8C03;&#x7528;fit_transform</span>
+    data2 = transfer2.fit_transform(data)
+    print(<span class="hljs-string">&quot;&#x964D;&#x7EF4;&#x5230;3&#x7EF4;&#x7684;&#x7ED3;&#x679C;&#xFF1A;\n&quot;</span>, data2)
+
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">None</span>
+</code></pre>
+<p>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-python">&#x4FDD;&#x7559;<span class="hljs-number">90</span>%&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x964D;&#x7EF4;&#x7ED3;&#x679C;&#x4E3A;&#xFF1A;
+ [[ -<span class="hljs-number">3.13587302e-16</span>   <span class="hljs-number">3.82970843e+00</span>]
+ [ -<span class="hljs-number">5.74456265e+00</span>  -<span class="hljs-number">1.91485422e+00</span>]
+ [  <span class="hljs-number">5.74456265e+00</span>  -<span class="hljs-number">1.91485422e+00</span>]]
+&#x964D;&#x7EF4;&#x5230;<span class="hljs-number">3</span>&#x7EF4;&#x7684;&#x7ED3;&#x679C;&#xFF1A;
+ [[ -<span class="hljs-number">3.13587302e-16</span>   <span class="hljs-number">3.82970843e+00</span>   <span class="hljs-number">4.59544715e-16</span>]
+ [ -<span class="hljs-number">5.74456265e+00</span>  -<span class="hljs-number">1.91485422e+00</span>   <span class="hljs-number">4.59544715e-16</span>]
+ [  <span class="hljs-number">5.74456265e+00</span>  -<span class="hljs-number">1.91485422e+00</span>   <span class="hljs-number">4.59544715e-16</span>]]
+</code></pre>
+<h2 id="262-&#x6848;&#x4F8B;&#xFF1A;&#x63A2;&#x7A76;&#x7528;&#x6237;&#x5BF9;&#x7269;&#x54C1;&#x7C7B;&#x522B;&#x7684;&#x559C;&#x597D;&#x7EC6;&#x5206;&#x964D;&#x7EF4;">2.6.2 &#x6848;&#x4F8B;&#xFF1A;&#x63A2;&#x7A76;&#x7528;&#x6237;&#x5BF9;&#x7269;&#x54C1;&#x7C7B;&#x522B;&#x7684;&#x559C;&#x597D;&#x7EC6;&#x5206;&#x964D;&#x7EF4;</h2>
+<p><img src="../images/instacart.png" alt="instacart"></p>
+<p>&#x6570;&#x636E;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li><p>order_products__prior.csv&#xFF1A;&#x8BA2;&#x5355;&#x4E0E;&#x5546;&#x54C1;&#x4FE1;&#x606F;</p>
+<ul>
+<li>&#x5B57;&#x6BB5;&#xFF1A;<strong>order_id</strong>, <strong>product_id</strong>, add_to_cart_order, reordered  </li>
+</ul>
+</li>
+<li><p>products.csv&#xFF1A;&#x5546;&#x54C1;&#x4FE1;&#x606F;</p>
+<ul>
+<li>&#x5B57;&#x6BB5;&#xFF1A;<strong>product_id</strong>, product_name, <strong>aisle_id</strong>, department_id</li>
+</ul>
+</li>
+<li>orders.csv&#xFF1A;&#x7528;&#x6237;&#x7684;&#x8BA2;&#x5355;&#x4FE1;&#x606F;      <ul>
+<li>&#x5B57;&#x6BB5;&#xFF1A;<strong>order_id</strong>,<strong>user_id</strong>,eval_set,order_number,&#x2026;.</li>
+</ul>
+</li>
+<li>aisles.csv&#xFF1A;&#x5546;&#x54C1;&#x6240;&#x5C5E;&#x5177;&#x4F53;&#x7269;&#x54C1;&#x7C7B;&#x522B;<ul>
+<li>&#x5B57;&#x6BB5;&#xFF1A; <strong>aisle_id</strong>, <strong>aisle</strong>  </li>
+</ul>
+</li>
+</ul>
+<h3 id="1-&#x9700;&#x6C42;">1 &#x9700;&#x6C42;</h3>
+<p><img src="../images/instacart&#x6548;&#x679C;.png" alt="instacart&#x6548;&#x679C;"></p>
+<p><img src="../images/instacartPCA&#x7ED3;&#x679C;.png" alt="instacartPCA&#x7ED3;&#x679C;"></p>
+<h3 id="2-&#x5206;&#x6790;">2 &#x5206;&#x6790;</h3>
+<ul>
+<li>&#x5408;&#x5E76;&#x8868;&#xFF0C;&#x4F7F;&#x5F97;<strong>user_id</strong>&#x4E0E;<strong>aisle</strong>&#x5728;&#x4E00;&#x5F20;&#x8868;&#x5F53;&#x4E2D;</li>
+<li>&#x8FDB;&#x884C;&#x4EA4;&#x53C9;&#x8868;&#x53D8;&#x6362;</li>
+<li>&#x8FDB;&#x884C;&#x964D;&#x7EF4;</li>
+</ul>
+<h3 id="3-&#x5B8C;&#x6574;&#x4EE3;&#x7801;">3 &#x5B8C;&#x6574;&#x4EE3;&#x7801;</h3>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
+<span class="hljs-keyword">from</span> sklearn.decomposition <span class="hljs-keyword">import</span> PCA
+
+<span class="hljs-comment"># 1&#x3001;&#x83B7;&#x53D6;&#x6570;&#x636E;&#x96C6;</span>
+<span class="hljs-comment"># &#xB7;&#x5546;&#x54C1;&#x4FE1;&#x606F;- products.csv&#xFF1A;</span>
+<span class="hljs-comment"># Fields&#xFF1A;product_id, product_name, aisle_id, department_id</span>
+<span class="hljs-comment"># &#xB7;&#x8BA2;&#x5355;&#x4E0E;&#x5546;&#x54C1;&#x4FE1;&#x606F;- order_products__prior.csv&#xFF1A;</span>
+<span class="hljs-comment"># Fields&#xFF1A;order_id, product_id, add_to_cart_order, reordered </span>
+<span class="hljs-comment"># &#xB7;&#x7528;&#x6237;&#x7684;&#x8BA2;&#x5355;&#x4FE1;&#x606F;- orders.csv&#xFF1A;</span>
+<span class="hljs-comment"># Fields&#xFF1A;order_id, user_id,eval_set, order_number,order_dow, order_hour_of_day, days_since_prior_order </span>
+<span class="hljs-comment"># &#xB7;&#x5546;&#x54C1;&#x6240;&#x5C5E;&#x5177;&#x4F53;&#x7269;&#x54C1;&#x7C7B;&#x522B;- aisles.csv&#xFF1A;</span>
+<span class="hljs-comment"># Fields&#xFF1A;aisle_id, aisle     </span>
+products = pd.read_csv(<span class="hljs-string">&quot;./instacart/products.csv&quot;</span>)
+order_products = pd.read_csv(<span class="hljs-string">&quot;./instacart/order_products__prior.csv&quot;</span>)
+orders = pd.read_csv(<span class="hljs-string">&quot;./instacart/orders.csv&quot;</span>)
+aisles = pd.read_csv(<span class="hljs-string">&quot;./instacart/aisles.csv&quot;</span>)
+
+<span class="hljs-comment"># 2&#x3001;&#x5408;&#x5E76;&#x8868;&#xFF0C;&#x5C06;user_id&#x548C;aisle&#x653E;&#x5728;&#x4E00;&#x5F20;&#x8868;&#x4E0A;</span>
+<span class="hljs-comment"># 1&#xFF09;&#x5408;&#x5E76;orders&#x548C;order_products on=order_id tab1:order_id, product_id, user_id</span>
+tab1 = pd.merge(orders, order_products, on=[<span class="hljs-string">&quot;order_id&quot;</span>, <span class="hljs-string">&quot;order_id&quot;</span>])
+<span class="hljs-comment"># 2&#xFF09;&#x5408;&#x5E76;tab1&#x548C;products on=product_id tab2:aisle_id</span>
+tab2 = pd.merge(tab1, products, on=[<span class="hljs-string">&quot;product_id&quot;</span>, <span class="hljs-string">&quot;product_id&quot;</span>])
+<span class="hljs-comment"># 3&#xFF09;&#x5408;&#x5E76;tab2&#x548C;aisles on=aisle_id tab3:user_id, aisle</span>
+tab3 = pd.merge(tab2, aisles, on=[<span class="hljs-string">&quot;aisle_id&quot;</span>, <span class="hljs-string">&quot;aisle_id&quot;</span>])
+
+<span class="hljs-comment"># 3&#x3001;&#x4EA4;&#x53C9;&#x8868;&#x5904;&#x7406;&#xFF0C;&#x628A;user_id&#x548C;aisle&#x8FDB;&#x884C;&#x5206;&#x7EC4;</span>
+table = pd.crosstab(tab3[<span class="hljs-string">&quot;user_id&quot;</span>], tab3[<span class="hljs-string">&quot;aisle&quot;</span>])
+
+<span class="hljs-comment"># 4&#x3001;&#x4E3B;&#x6210;&#x5206;&#x5206;&#x6790;&#x7684;&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x964D;&#x7EF4;</span>
+<span class="hljs-comment"># 1&#xFF09;&#x5B9E;&#x4F8B;&#x5316;&#x4E00;&#x4E2A;&#x8F6C;&#x6362;&#x5668;&#x7C7B;PCA</span>
+transfer = PCA(n_components=<span class="hljs-number">0.95</span>)
+<span class="hljs-comment"># 2&#xFF09;fit_transform</span>
+data = transfer.fit_transform(table)
+
+data.shape
+</code></pre>
+<p>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-python">(<span class="hljs-number">206209</span>, <span class="hljs-number">44</span>)
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../day01/section4.html" class="navigation navigation-prev " aria-label="Previous page: 特征降维"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../day01/section6.html" class="navigation navigation-next " aria-label="Next page: 总结"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"katex":{},"expandable-chapters-small":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

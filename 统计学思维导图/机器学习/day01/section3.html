@@ -1,0 +1,912 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>特征预处理 | 机器学习算法课程定位、目标</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-katex/katex.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../day01/section4.html" />
+    
+    
+    <link rel="prev" href="../day01/section2.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="2.4"
+        data-chapter-title="特征预处理"
+        data-filepath="day01/section3.md"
+        data-basepath=".."
+        data-revision="Sat Jun 23 2018 19:16:24 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        机器学习课程
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="ml/index.html">
+            
+                
+                    <a href="../ml/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        机器学习概述
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="ml/section0.html">
+            
+                
+                    <a href="../ml/section0.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        人工智能概述
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="ml/section1.html">
+            
+                
+                    <a href="../ml/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        什么是机器学习
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="ml/section2.html">
+            
+                
+                    <a href="../ml/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        机器学习算法分类
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="ml/section3.html">
+            
+                
+                    <a href="../ml/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        机器学习开发流程
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="ml/section4.html">
+            
+                
+                    <a href="../ml/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        学习框架和资料介绍
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="day01/index.html">
+            
+                
+                    <a href="../day01/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        特征工程
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="day01/section0.html">
+            
+                
+                    <a href="../day01/section0.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        数据集
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="day01/section1.html">
+            
+                
+                    <a href="../day01/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        特征工程介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="day01/section2.html">
+            
+                
+                    <a href="../day01/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        特征抽取
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.4" data-path="day01/section3.html">
+            
+                
+                    <a href="../day01/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        特征预处理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="day01/section4.html">
+            
+                
+                    <a href="../day01/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        特征降维
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="day01/section5.html">
+            
+                
+                    <a href="../day01/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        主成分分析
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="day01/section6.html">
+            
+                
+                    <a href="../day01/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.</b>
+                        
+                        总结
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="day01/section7.html">
+            
+                
+                    <a href="../day01/section7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.8.</b>
+                        
+                        每日作业
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="day02/index.html">
+            
+                
+                    <a href="../day02/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        分类算法
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="day02/section1.html">
+            
+                
+                    <a href="../day02/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        数据集介绍与划分
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="day02/section2.html">
+            
+                
+                    <a href="../day02/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        sklearn转换器和估计器
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="day02/section3.html">
+            
+                
+                    <a href="../day02/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        K-近邻算法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="day02/section4.html">
+            
+                
+                    <a href="../day02/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        模型选择与调优
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="day02/section5.html">
+            
+                
+                    <a href="../day02/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        朴素贝叶斯算法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="day02/section6.html">
+            
+                
+                    <a href="../day02/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        决策树
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="day02/section7.html">
+            
+                
+                    <a href="../day02/section7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.</b>
+                        
+                        集成学习方法之随机森林
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="day02/section8.html">
+            
+                
+                    <a href="../day02/section8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.8.</b>
+                        
+                        总结
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="day02/section9.html">
+            
+                
+                    <a href="../day02/section9.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.9.</b>
+                        
+                        每日作业
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="day03/index.html">
+            
+                
+                    <a href="../day03/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        回归与聚类算法
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="day03/section1.html">
+            
+                
+                    <a href="../day03/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        线性回归
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="day03/section2.html">
+            
+                
+                    <a href="../day03/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        欠拟合与过拟合
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="day03/section3.html">
+            
+                
+                    <a href="../day03/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        线性回归的改进-岭回归
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="day03/section4.html">
+            
+                
+                    <a href="../day03/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        分类算法-逻辑回归与二分类
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="day03/section5.html">
+            
+                
+                    <a href="../day03/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        模型保存和加载
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="day03/section6.html">
+            
+                
+                    <a href="../day03/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        无监督学习-K-means算法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="day03/section7.html">
+            
+                
+                    <a href="../day03/section7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.7.</b>
+                        
+                        总结
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="day03/section8.html">
+            
+                
+                    <a href="../day03/section8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.8.</b>
+                        
+                        每日作业
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >机器学习算法课程定位、目标</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="24-&#x7279;&#x5F81;&#x9884;&#x5904;&#x7406;">2.4 &#x7279;&#x5F81;&#x9884;&#x5904;&#x7406;</h1>
+<h2 id="&#x5B66;&#x4E60;&#x76EE;&#x6807;">&#x5B66;&#x4E60;&#x76EE;&#x6807;</h2>
+<ul>
+<li>&#x76EE;&#x6807;<ul>
+<li>&#x4E86;&#x89E3;&#x6570;&#x503C;&#x578B;&#x6570;&#x636E;&#x3001;&#x7C7B;&#x522B;&#x578B;&#x6570;&#x636E;&#x7279;&#x70B9;</li>
+<li>&#x5E94;&#x7528;MinMaxScaler&#x5B9E;&#x73B0;&#x5BF9;&#x7279;&#x5F81;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5F52;&#x4E00;&#x5316;</li>
+<li>&#x5E94;&#x7528;StandardScaler&#x5B9E;&#x73B0;&#x5BF9;&#x7279;&#x5F81;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x6807;&#x51C6;&#x5316;</li>
+</ul>
+</li>
+<li>&#x5E94;&#x7528;<ul>
+<li>&#x65E0;</li>
+</ul>
+</li>
+</ul>
+<p>&#x4EC0;&#x4E48;&#x662F;&#x7279;&#x5F81;&#x9884;&#x5904;&#x7406;&#xFF1F;</p>
+<p><img src="../images/&#x7279;&#x5F81;&#x9884;&#x5904;&#x7406;&#x56FE;.png" alt="&#x7279;&#x5F81;&#x9884;&#x5904;&#x7406;&#x56FE;"></p>
+<h2 id="241-&#x4EC0;&#x4E48;&#x662F;&#x7279;&#x5F81;&#x9884;&#x5904;&#x7406;">2.4.1 &#x4EC0;&#x4E48;&#x662F;&#x7279;&#x5F81;&#x9884;&#x5904;&#x7406;</h2>
+<pre><code class="lang-python"><span class="hljs-comment"># scikit-learn&#x7684;&#x89E3;&#x91CA;</span>
+provides several common utility functions <span class="hljs-keyword">and</span> transformer classes to change raw feature vectors into a representation that <span class="hljs-keyword">is</span> more suitable <span class="hljs-keyword">for</span> the downstream estimators.
+</code></pre>
+<p>&#x7FFB;&#x8BD1;&#x8FC7;&#x6765;&#xFF1A;&#x901A;&#x8FC7;<strong>&#x4E00;&#x4E9B;&#x8F6C;&#x6362;&#x51FD;&#x6570;</strong>&#x5C06;&#x7279;&#x5F81;&#x6570;&#x636E;<strong>&#x8F6C;&#x6362;&#x6210;&#x66F4;&#x52A0;&#x9002;&#x5408;&#x7B97;&#x6CD5;&#x6A21;&#x578B;</strong>&#x7684;&#x7279;&#x5F81;&#x6570;&#x636E;&#x8FC7;&#x7A0B;</p>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E0A;&#x9762;&#x90A3;&#x5F20;&#x56FE;&#x6765;&#x7406;&#x89E3;</p>
+<h3 id="1-&#x5305;&#x542B;&#x5185;&#x5BB9;">1 &#x5305;&#x542B;&#x5185;&#x5BB9;</h3>
+<ul>
+<li>&#x6570;&#x503C;&#x578B;&#x6570;&#x636E;&#x7684;&#x65E0;&#x91CF;&#x7EB2;&#x5316;&#xFF1A;<ul>
+<li>&#x5F52;&#x4E00;&#x5316;</li>
+<li>&#x6807;&#x51C6;&#x5316;</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-&#x7279;&#x5F81;&#x9884;&#x5904;&#x7406;api">2 &#x7279;&#x5F81;&#x9884;&#x5904;&#x7406;API</h3>
+<pre><code class="lang-python">sklearn.preprocessing
+</code></pre>
+<h4 id="&#x4E3A;&#x4EC0;&#x4E48;&#x6211;&#x4EEC;&#x8981;&#x8FDB;&#x884C;&#x5F52;&#x4E00;&#x5316;&#x6807;&#x51C6;&#x5316;&#xFF1F;">&#x4E3A;&#x4EC0;&#x4E48;&#x6211;&#x4EEC;&#x8981;&#x8FDB;&#x884C;&#x5F52;&#x4E00;&#x5316;/&#x6807;&#x51C6;&#x5316;&#xFF1F;</h4>
+<ul>
+<li>&#x7279;&#x5F81;&#x7684;<strong>&#x5355;&#x4F4D;&#x6216;&#x8005;&#x5927;&#x5C0F;&#x76F8;&#x5DEE;&#x8F83;&#x5927;&#xFF0C;&#x6216;&#x8005;&#x67D0;&#x7279;&#x5F81;&#x7684;&#x65B9;&#x5DEE;&#x76F8;&#x6BD4;&#x5176;&#x4ED6;&#x7684;&#x7279;&#x5F81;&#x8981;&#x5927;&#x51FA;&#x51E0;&#x4E2A;&#x6570;&#x91CF;&#x7EA7;</strong>&#xFF0C;<strong>&#x5BB9;&#x6613;&#x5F71;&#x54CD;&#xFF08;&#x652F;&#x914D;&#xFF09;&#x76EE;&#x6807;&#x7ED3;&#x679C;</strong>&#xFF0C;&#x4F7F;&#x5F97;&#x4E00;&#x4E9B;&#x7B97;&#x6CD5;&#x65E0;&#x6CD5;&#x5B66;&#x4E60;&#x5230;&#x5176;&#x5B83;&#x7684;&#x7279;&#x5F81;</li>
+</ul>
+<h3 id="&#x7EA6;&#x4F1A;&#x5BF9;&#x8C61;&#x6570;&#x636E;">&#x7EA6;&#x4F1A;&#x5BF9;&#x8C61;&#x6570;&#x636E;</h3>
+<p><img src="../images/&#x7EA6;&#x4F1A;&#x5BF9;&#x8C61;&#x6570;&#x636E;.png" alt="&#x7EA6;&#x4F1A;&#x5BF9;&#x8C61;&#x6570;&#x636E;"></p>
+<p>&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7528;&#x5230;&#x4E00;&#x4E9B;&#x65B9;&#x6CD5;&#x8FDB;&#x884C;<strong>&#x65E0;&#x91CF;&#x7EB2;&#x5316;</strong>&#xFF0C;<strong>&#x4F7F;&#x4E0D;&#x540C;&#x89C4;&#x683C;&#x7684;&#x6570;&#x636E;&#x8F6C;&#x6362;&#x5230;&#x540C;&#x4E00;&#x89C4;&#x683C;</strong></p>
+<h2 id="242-&#x5F52;&#x4E00;&#x5316;">2.4.2 &#x5F52;&#x4E00;&#x5316;</h2>
+<h3 id="1-&#x5B9A;&#x4E49;">1 &#x5B9A;&#x4E49;</h3>
+<p>&#x901A;&#x8FC7;&#x5BF9;&#x539F;&#x59CB;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x53D8;&#x6362;&#x628A;&#x6570;&#x636E;&#x6620;&#x5C04;&#x5230;(&#x9ED8;&#x8BA4;&#x4E3A;[0,1])&#x4E4B;&#x95F4; </p>
+<h3 id="2-&#x516C;&#x5F0F;">2 &#x516C;&#x5F0F;</h3>
+<p><img src="../images/&#x5F52;&#x4E00;&#x5316;&#x516C;&#x5F0F;.png" alt="&#x5F52;&#x4E00;&#x5316;&#x516C;&#x5F0F;"></p>
+<blockquote>
+<p>&#x4F5C;&#x7528;&#x4E8E;&#x6BCF;&#x4E00;&#x5217;&#xFF0C;max&#x4E3A;&#x4E00;&#x5217;&#x7684;&#x6700;&#x5927;&#x503C;&#xFF0C;min&#x4E3A;&#x4E00;&#x5217;&#x7684;&#x6700;&#x5C0F;&#x503C;,&#x90A3;&#x4E48;X&#x2019;&#x2019;&#x4E3A;&#x6700;&#x7EC8;&#x7ED3;&#x679C;&#xFF0C;mx&#xFF0C;mi&#x5206;&#x522B;&#x4E3A;&#x6307;&#x5B9A;&#x533A;&#x95F4;&#x503C;&#x9ED8;&#x8BA4;mx&#x4E3A;1,mi&#x4E3A;0</p>
+</blockquote>
+<p>&#x90A3;&#x4E48;&#x600E;&#x4E48;&#x7406;&#x89E3;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x5462;&#xFF1F;&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;</p>
+<p><img src="../images/&#x5F52;&#x4E00;&#x5316;&#x8BA1;&#x7B97;&#x8FC7;&#x7A0B;.png" alt="&#x5F52;&#x4E00;&#x5316;&#x8BA1;&#x7B97;&#x8FC7;&#x7A0B;"></p>
+<h3 id="3-api">3 API</h3>
+<ul>
+<li>sklearn.preprocessing.MinMaxScaler (feature_range=(0,1)&#x2026; )<ul>
+<li>MinMaxScalar.fit_transform(X)       <ul>
+<li>X:numpy array&#x683C;&#x5F0F;&#x7684;&#x6570;&#x636E;[n_samples,n_features]  </li>
+</ul>
+</li>
+<li>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x8F6C;&#x6362;&#x540E;&#x7684;&#x5F62;&#x72B6;&#x76F8;&#x540C;&#x7684;array</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-&#x6570;&#x636E;&#x8BA1;&#x7B97;">4 &#x6570;&#x636E;&#x8BA1;&#x7B97;</h3>
+<p>&#x6211;&#x4EEC;&#x5BF9;&#x4EE5;&#x4E0B;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x8FD0;&#x7B97;&#xFF0C;&#x5728;dating.txt&#x4E2D;&#x3002;&#x4FDD;&#x5B58;&#x7684;&#x5C31;&#x662F;&#x4E4B;&#x524D;&#x7684;&#x7EA6;&#x4F1A;&#x5BF9;&#x8C61;&#x6570;&#x636E;</p>
+<pre><code class="lang-python">milage,Liters,Consumtime,target
+<span class="hljs-number">40920</span>,<span class="hljs-number">8.326976</span>,<span class="hljs-number">0.953952</span>,<span class="hljs-number">3</span>
+<span class="hljs-number">14488</span>,<span class="hljs-number">7.153469</span>,<span class="hljs-number">1.673904</span>,<span class="hljs-number">2</span>
+<span class="hljs-number">26052</span>,<span class="hljs-number">1.441871</span>,<span class="hljs-number">0.805124</span>,<span class="hljs-number">1</span>
+<span class="hljs-number">75136</span>,<span class="hljs-number">13.147394</span>,<span class="hljs-number">0.428964</span>,<span class="hljs-number">1</span>
+<span class="hljs-number">38344</span>,<span class="hljs-number">1.669788</span>,<span class="hljs-number">0.134296</span>,<span class="hljs-number">1</span>
+</code></pre>
+<ul>
+<li>&#x5206;&#x6790;</li>
+</ul>
+<p>1&#x3001;&#x5B9E;&#x4F8B;&#x5316;MinMaxScalar</p>
+<p>2&#x3001;&#x901A;&#x8FC7;fit_transform&#x8F6C;&#x6362;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
+<span class="hljs-keyword">from</span> sklearn.preprocessing <span class="hljs-keyword">import</span> MinMaxScaler
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">minmax_demo</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x5F52;&#x4E00;&#x5316;&#x6F14;&#x793A;
+    :return: None
+    &quot;&quot;&quot;</span>
+    data = pd.read_csv(<span class="hljs-string">&quot;dating.txt&quot;</span>)
+    print(data)
+    <span class="hljs-comment"># 1&#x3001;&#x5B9E;&#x4F8B;&#x5316;&#x4E00;&#x4E2A;&#x8F6C;&#x6362;&#x5668;&#x7C7B;</span>
+    transfer = MinMaxScaler(feature_range=(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>))
+    <span class="hljs-comment"># 2&#x3001;&#x8C03;&#x7528;fit_transform</span>
+    data = transfer.fit_transform(data[[<span class="hljs-string">&apos;milage&apos;</span>,<span class="hljs-string">&apos;Liters&apos;</span>,<span class="hljs-string">&apos;Consumtime&apos;</span>]])
+    print(<span class="hljs-string">&quot;&#x6700;&#x5C0F;&#x503C;&#x6700;&#x5927;&#x503C;&#x5F52;&#x4E00;&#x5316;&#x5904;&#x7406;&#x7684;&#x7ED3;&#x679C;&#xFF1A;\n&quot;</span>, data)
+
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">None</span>
+</code></pre>
+<p>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-python">     milage     Liters  Consumtime  target
+<span class="hljs-number">0</span>     <span class="hljs-number">40920</span>   <span class="hljs-number">8.326976</span>    <span class="hljs-number">0.953952</span>       <span class="hljs-number">3</span>
+<span class="hljs-number">1</span>     <span class="hljs-number">14488</span>   <span class="hljs-number">7.153469</span>    <span class="hljs-number">1.673904</span>       <span class="hljs-number">2</span>
+<span class="hljs-number">2</span>     <span class="hljs-number">26052</span>   <span class="hljs-number">1.441871</span>    <span class="hljs-number">0.805124</span>       <span class="hljs-number">1</span>
+<span class="hljs-number">3</span>     <span class="hljs-number">75136</span>  <span class="hljs-number">13.147394</span>    <span class="hljs-number">0.428964</span>       <span class="hljs-number">1</span>
+..      ...        ...         ...     ...
+<span class="hljs-number">998</span>   <span class="hljs-number">48111</span>   <span class="hljs-number">9.134528</span>    <span class="hljs-number">0.728045</span>       <span class="hljs-number">3</span>
+<span class="hljs-number">999</span>   <span class="hljs-number">43757</span>   <span class="hljs-number">7.882601</span>    <span class="hljs-number">1.332446</span>       <span class="hljs-number">3</span>
+
+[<span class="hljs-number">1000</span> rows x <span class="hljs-number">4</span> columns]
+&#x6700;&#x5C0F;&#x503C;&#x6700;&#x5927;&#x503C;&#x5F52;&#x4E00;&#x5316;&#x5904;&#x7406;&#x7684;&#x7ED3;&#x679C;&#xFF1A;
+ [[ <span class="hljs-number">2.44832535</span>  <span class="hljs-number">2.39805139</span>  <span class="hljs-number">2.56233353</span>]
+ [ <span class="hljs-number">2.15873259</span>  <span class="hljs-number">2.34195467</span>  <span class="hljs-number">2.98724416</span>]
+ [ <span class="hljs-number">2.28542943</span>  <span class="hljs-number">2.06892523</span>  <span class="hljs-number">2.47449629</span>]
+ ..., 
+ [ <span class="hljs-number">2.29115949</span>  <span class="hljs-number">2.50910294</span>  <span class="hljs-number">2.51079493</span>]
+ [ <span class="hljs-number">2.52711097</span>  <span class="hljs-number">2.43665451</span>  <span class="hljs-number">2.4290048</span> ]
+ [ <span class="hljs-number">2.47940793</span>  <span class="hljs-number">2.3768091</span>   <span class="hljs-number">2.78571804</span>]]
+</code></pre>
+<h3 id="&#x95EE;&#x9898;&#xFF1A;&#x5982;&#x679C;&#x6570;&#x636E;&#x4E2D;&#x5F02;&#x5E38;&#x70B9;&#x8F83;&#x591A;&#xFF0C;&#x4F1A;&#x6709;&#x4EC0;&#x4E48;&#x5F71;&#x54CD;&#xFF1F;">&#x95EE;&#x9898;&#xFF1A;&#x5982;&#x679C;&#x6570;&#x636E;&#x4E2D;&#x5F02;&#x5E38;&#x70B9;&#x8F83;&#x591A;&#xFF0C;&#x4F1A;&#x6709;&#x4EC0;&#x4E48;&#x5F71;&#x54CD;&#xFF1F;</h3>
+<p><img src="../images/&#x5F02;&#x5E38;&#x70B9;&#x5BF9;&#x5F52;&#x4E00;&#x5316;&#x5F71;&#x54CD;.png" alt="&#x5F02;&#x5E38;&#x70B9;&#x5BF9;&#x5F52;&#x4E00;&#x5316;&#x5F71;&#x54CD;"></p>
+<h3 id="5-&#x5F52;&#x4E00;&#x5316;&#x603B;&#x7ED3;">5 &#x5F52;&#x4E00;&#x5316;&#x603B;&#x7ED3;</h3>
+<p>&#x6CE8;&#x610F;&#x6700;&#x5927;&#x503C;&#x6700;&#x5C0F;&#x503C;&#x662F;&#x53D8;&#x5316;&#x7684;&#xFF0C;&#x53E6;&#x5916;&#xFF0C;&#x6700;&#x5927;&#x503C;&#x4E0E;&#x6700;&#x5C0F;&#x503C;&#x975E;&#x5E38;&#x5BB9;&#x6613;&#x53D7;&#x5F02;&#x5E38;&#x70B9;&#x5F71;&#x54CD;&#xFF0C;<strong>&#x6240;&#x4EE5;&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x9C81;&#x68D2;&#x6027;&#x8F83;&#x5DEE;&#xFF0C;&#x53EA;&#x9002;&#x5408;&#x4F20;&#x7EDF;&#x7CBE;&#x786E;&#x5C0F;&#x6570;&#x636E;&#x573A;&#x666F;&#x3002;</strong> </p>
+<p>&#x600E;&#x4E48;&#x529E;&#xFF1F;</p>
+<h2 id="243-&#x6807;&#x51C6;&#x5316;">2.4.3 &#x6807;&#x51C6;&#x5316;</h2>
+<h3 id="1-&#x5B9A;&#x4E49;">1 &#x5B9A;&#x4E49;</h3>
+<p>&#x901A;&#x8FC7;&#x5BF9;&#x539F;&#x59CB;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x53D8;&#x6362;&#x628A;&#x6570;&#x636E;&#x53D8;&#x6362;&#x5230;&#x5747;&#x503C;&#x4E3A;0,&#x6807;&#x51C6;&#x5DEE;&#x4E3A;1&#x8303;&#x56F4;&#x5185; </p>
+<h3 id="2-&#x516C;&#x5F0F;">2 &#x516C;&#x5F0F;</h3>
+<p><img src="../images/&#x6807;&#x51C6;&#x5316;&#x516C;&#x5F0F;.png" alt="&#x6807;&#x51C6;&#x5316;&#x516C;&#x5F0F;"></p>
+<blockquote>
+<p>&#x4F5C;&#x7528;&#x4E8E;&#x6BCF;&#x4E00;&#x5217;&#xFF0C;mean&#x4E3A;&#x5E73;&#x5747;&#x503C;&#xFF0C;&#x3C3;&#x4E3A;&#x6807;&#x51C6;&#x5DEE; </p>
+</blockquote>
+<p>&#x6240;&#x4EE5;&#x56DE;&#x5230;&#x521A;&#x624D;&#x5F02;&#x5E38;&#x70B9;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x6211;&#x4EEC;&#x518D;&#x6765;&#x770B;&#x770B;&#x6807;&#x51C6;&#x5316;</p>
+<p><img src="../images/&#x6807;&#x51C6;&#x5316;&#x5F02;&#x5E38;&#x70B9;&#x5F71;&#x54CD;.png" alt="&#x6807;&#x51C6;&#x5316;&#x5F02;&#x5E38;&#x70B9;&#x5F71;&#x54CD;"></p>
+<ul>
+<li>&#x5BF9;&#x4E8E;&#x5F52;&#x4E00;&#x5316;&#x6765;&#x8BF4;&#xFF1A;&#x5982;&#x679C;&#x51FA;&#x73B0;&#x5F02;&#x5E38;&#x70B9;&#xFF0C;&#x5F71;&#x54CD;&#x4E86;&#x6700;&#x5927;&#x503C;&#x548C;&#x6700;&#x5C0F;&#x503C;&#xFF0C;&#x90A3;&#x4E48;&#x7ED3;&#x679C;&#x663E;&#x7136;&#x4F1A;&#x53D1;&#x751F;&#x6539;&#x53D8;</li>
+<li>&#x5BF9;&#x4E8E;&#x6807;&#x51C6;&#x5316;&#x6765;&#x8BF4;&#xFF1A;&#x5982;&#x679C;&#x51FA;&#x73B0;&#x5F02;&#x5E38;&#x70B9;&#xFF0C;&#x7531;&#x4E8E;&#x5177;&#x6709;&#x4E00;&#x5B9A;&#x6570;&#x636E;&#x91CF;&#xFF0C;&#x5C11;&#x91CF;&#x7684;&#x5F02;&#x5E38;&#x70B9;&#x5BF9;&#x4E8E;&#x5E73;&#x5747;&#x503C;&#x7684;&#x5F71;&#x54CD;&#x5E76;&#x4E0D;&#x5927;&#xFF0C;&#x4ECE;&#x800C;&#x65B9;&#x5DEE;&#x6539;&#x53D8;&#x8F83;&#x5C0F;&#x3002;</li>
+</ul>
+<h3 id="3-api">3 API</h3>
+<ul>
+<li>sklearn.preprocessing.StandardScaler( )<ul>
+<li>&#x5904;&#x7406;&#x4E4B;&#x540E;&#x6BCF;&#x5217;&#x6765;&#x8BF4;&#x6240;&#x6709;&#x6570;&#x636E;&#x90FD;&#x805A;&#x96C6;&#x5728;&#x5747;&#x503C;0&#x9644;&#x8FD1;&#x6807;&#x51C6;&#x5DEE;&#x5DEE;&#x4E3A;1 </li>
+<li>StandardScaler.fit_transform(X)       <ul>
+<li>X:numpy array&#x683C;&#x5F0F;&#x7684;&#x6570;&#x636E;[n_samples,n_features]  </li>
+</ul>
+</li>
+<li>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x8F6C;&#x6362;&#x540E;&#x7684;&#x5F62;&#x72B6;&#x76F8;&#x540C;&#x7684;array</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-&#x6570;&#x636E;&#x8BA1;&#x7B97;">4 &#x6570;&#x636E;&#x8BA1;&#x7B97;</h3>
+<p>&#x540C;&#x6837;&#x5BF9;&#x4E0A;&#x9762;&#x7684;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5904;&#x7406;</p>
+<ul>
+<li>&#x5206;&#x6790;</li>
+</ul>
+<p>1&#x3001;&#x5B9E;&#x4F8B;&#x5316;StandardScaler</p>
+<p>2&#x3001;&#x901A;&#x8FC7;fit_transform&#x8F6C;&#x6362;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
+<span class="hljs-keyword">from</span> sklearn.preprocessing <span class="hljs-keyword">import</span> StandardScaler
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">stand_demo</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x6807;&#x51C6;&#x5316;&#x6F14;&#x793A;
+    :return: None
+    &quot;&quot;&quot;</span>
+    data = pd.read_csv(<span class="hljs-string">&quot;dating.txt&quot;</span>)
+    print(data)
+    <span class="hljs-comment"># 1&#x3001;&#x5B9E;&#x4F8B;&#x5316;&#x4E00;&#x4E2A;&#x8F6C;&#x6362;&#x5668;&#x7C7B;</span>
+    transfer = StandardScaler()
+    <span class="hljs-comment"># 2&#x3001;&#x8C03;&#x7528;fit_transform</span>
+    data = transfer.fit_transform(data[[<span class="hljs-string">&apos;milage&apos;</span>,<span class="hljs-string">&apos;Liters&apos;</span>,<span class="hljs-string">&apos;Consumtime&apos;</span>]])
+    print(<span class="hljs-string">&quot;&#x6807;&#x51C6;&#x5316;&#x7684;&#x7ED3;&#x679C;:\n&quot;</span>, data)
+    print(<span class="hljs-string">&quot;&#x6BCF;&#x4E00;&#x5217;&#x7279;&#x5F81;&#x7684;&#x5E73;&#x5747;&#x503C;&#xFF1A;\n&quot;</span>, transfer.mean_)
+    print(<span class="hljs-string">&quot;&#x6BCF;&#x4E00;&#x5217;&#x7279;&#x5F81;&#x7684;&#x65B9;&#x5DEE;&#xFF1A;\n&quot;</span>, transfer.var_)
+
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">None</span>
+</code></pre>
+<p>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-python">     milage     Liters  Consumtime  target
+<span class="hljs-number">0</span>     <span class="hljs-number">40920</span>   <span class="hljs-number">8.326976</span>    <span class="hljs-number">0.953952</span>       <span class="hljs-number">3</span>
+<span class="hljs-number">1</span>     <span class="hljs-number">14488</span>   <span class="hljs-number">7.153469</span>    <span class="hljs-number">1.673904</span>       <span class="hljs-number">2</span>
+<span class="hljs-number">2</span>     <span class="hljs-number">26052</span>   <span class="hljs-number">1.441871</span>    <span class="hljs-number">0.805124</span>       <span class="hljs-number">1</span>
+..      ...        ...         ...     ...
+<span class="hljs-number">997</span>   <span class="hljs-number">26575</span>  <span class="hljs-number">10.650102</span>    <span class="hljs-number">0.866627</span>       <span class="hljs-number">3</span>
+<span class="hljs-number">998</span>   <span class="hljs-number">48111</span>   <span class="hljs-number">9.134528</span>    <span class="hljs-number">0.728045</span>       <span class="hljs-number">3</span>
+<span class="hljs-number">999</span>   <span class="hljs-number">43757</span>   <span class="hljs-number">7.882601</span>    <span class="hljs-number">1.332446</span>       <span class="hljs-number">3</span>
+
+[<span class="hljs-number">1000</span> rows x <span class="hljs-number">4</span> columns]
+&#x6807;&#x51C6;&#x5316;&#x7684;&#x7ED3;&#x679C;:
+ [[ <span class="hljs-number">0.33193158</span>  <span class="hljs-number">0.41660188</span>  <span class="hljs-number">0.24523407</span>]
+ [-<span class="hljs-number">0.87247784</span>  <span class="hljs-number">0.13992897</span>  <span class="hljs-number">1.69385734</span>]
+ [-<span class="hljs-number">0.34554872</span> -<span class="hljs-number">1.20667094</span> -<span class="hljs-number">0.05422437</span>]
+ ..., 
+ [-<span class="hljs-number">0.32171752</span>  <span class="hljs-number">0.96431572</span>  <span class="hljs-number">0.06952649</span>]
+ [ <span class="hljs-number">0.65959911</span>  <span class="hljs-number">0.60699509</span> -<span class="hljs-number">0.20931587</span>]
+ [ <span class="hljs-number">0.46120328</span>  <span class="hljs-number">0.31183342</span>  <span class="hljs-number">1.00680598</span>]]
+&#x6BCF;&#x4E00;&#x5217;&#x7279;&#x5F81;&#x7684;&#x5E73;&#x5747;&#x503C;&#xFF1A;
+ [  <span class="hljs-number">3.36354210e+04</span>   <span class="hljs-number">6.55996083e+00</span>   <span class="hljs-number">8.32072997e-01</span>]
+&#x6BCF;&#x4E00;&#x5217;&#x7279;&#x5F81;&#x7684;&#x65B9;&#x5DEE;&#xFF1A;
+ [  <span class="hljs-number">4.81628039e+08</span>   <span class="hljs-number">1.79902874e+01</span>   <span class="hljs-number">2.46999554e-01</span>]
+</code></pre>
+<h3 id="5-&#x6807;&#x51C6;&#x5316;&#x603B;&#x7ED3;">5 &#x6807;&#x51C6;&#x5316;&#x603B;&#x7ED3;</h3>
+<p>&#x5728;&#x5DF2;&#x6709;&#x6837;&#x672C;&#x8DB3;&#x591F;&#x591A;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x6BD4;&#x8F83;&#x7A33;&#x5B9A;&#xFF0C;&#x9002;&#x5408;&#x73B0;&#x4EE3;&#x5608;&#x6742;&#x5927;&#x6570;&#x636E;&#x573A;&#x666F;&#x3002; </p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../day01/section2.html" class="navigation navigation-prev " aria-label="Previous page: 特征抽取"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../day01/section4.html" class="navigation navigation-next " aria-label="Next page: 特征降维"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"katex":{},"expandable-chapters-small":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

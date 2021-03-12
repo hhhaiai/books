@@ -1,0 +1,993 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>特征降维 | 机器学习算法课程定位、目标</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-katex/katex.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../day01/section5.html" />
+    
+    
+    <link rel="prev" href="../day01/section3.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="2.5"
+        data-chapter-title="特征降维"
+        data-filepath="day01/section4.md"
+        data-basepath=".."
+        data-revision="Sat Jun 23 2018 19:16:24 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        机器学习课程
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="ml/index.html">
+            
+                
+                    <a href="../ml/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        机器学习概述
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="ml/section0.html">
+            
+                
+                    <a href="../ml/section0.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        人工智能概述
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="ml/section1.html">
+            
+                
+                    <a href="../ml/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        什么是机器学习
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="ml/section2.html">
+            
+                
+                    <a href="../ml/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        机器学习算法分类
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="ml/section3.html">
+            
+                
+                    <a href="../ml/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        机器学习开发流程
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="ml/section4.html">
+            
+                
+                    <a href="../ml/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        学习框架和资料介绍
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="day01/index.html">
+            
+                
+                    <a href="../day01/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        特征工程
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="day01/section0.html">
+            
+                
+                    <a href="../day01/section0.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        数据集
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="day01/section1.html">
+            
+                
+                    <a href="../day01/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        特征工程介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="day01/section2.html">
+            
+                
+                    <a href="../day01/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        特征抽取
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="day01/section3.html">
+            
+                
+                    <a href="../day01/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        特征预处理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.5" data-path="day01/section4.html">
+            
+                
+                    <a href="../day01/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        特征降维
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="day01/section5.html">
+            
+                
+                    <a href="../day01/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        主成分分析
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="day01/section6.html">
+            
+                
+                    <a href="../day01/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.</b>
+                        
+                        总结
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="day01/section7.html">
+            
+                
+                    <a href="../day01/section7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.8.</b>
+                        
+                        每日作业
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="day02/index.html">
+            
+                
+                    <a href="../day02/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        分类算法
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="day02/section1.html">
+            
+                
+                    <a href="../day02/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        数据集介绍与划分
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="day02/section2.html">
+            
+                
+                    <a href="../day02/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        sklearn转换器和估计器
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="day02/section3.html">
+            
+                
+                    <a href="../day02/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        K-近邻算法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="day02/section4.html">
+            
+                
+                    <a href="../day02/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        模型选择与调优
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="day02/section5.html">
+            
+                
+                    <a href="../day02/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        朴素贝叶斯算法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="day02/section6.html">
+            
+                
+                    <a href="../day02/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        决策树
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="day02/section7.html">
+            
+                
+                    <a href="../day02/section7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.</b>
+                        
+                        集成学习方法之随机森林
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="day02/section8.html">
+            
+                
+                    <a href="../day02/section8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.8.</b>
+                        
+                        总结
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="day02/section9.html">
+            
+                
+                    <a href="../day02/section9.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.9.</b>
+                        
+                        每日作业
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="day03/index.html">
+            
+                
+                    <a href="../day03/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        回归与聚类算法
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="day03/section1.html">
+            
+                
+                    <a href="../day03/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        线性回归
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="day03/section2.html">
+            
+                
+                    <a href="../day03/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        欠拟合与过拟合
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="day03/section3.html">
+            
+                
+                    <a href="../day03/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        线性回归的改进-岭回归
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="day03/section4.html">
+            
+                
+                    <a href="../day03/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        分类算法-逻辑回归与二分类
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="day03/section5.html">
+            
+                
+                    <a href="../day03/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        模型保存和加载
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="day03/section6.html">
+            
+                
+                    <a href="../day03/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        无监督学习-K-means算法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="day03/section7.html">
+            
+                
+                    <a href="../day03/section7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.7.</b>
+                        
+                        总结
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="day03/section8.html">
+            
+                
+                    <a href="../day03/section8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.8.</b>
+                        
+                        每日作业
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >机器学习算法课程定位、目标</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="25-&#x7279;&#x5F81;&#x964D;&#x7EF4;">2.5 &#x7279;&#x5F81;&#x964D;&#x7EF4;</h1>
+<h2 id="&#x5B66;&#x4E60;&#x76EE;&#x6807;">&#x5B66;&#x4E60;&#x76EE;&#x6807;</h2>
+<ul>
+<li>&#x76EE;&#x6807;<ul>
+<li>&#x77E5;&#x9053;&#x7279;&#x5F81;&#x9009;&#x62E9;&#x7684;&#x5D4C;&#x5165;&#x5F0F;&#x3001;&#x8FC7;&#x6EE4;&#x5F0F;&#x4EE5;&#x53CA;&#x5305;&#x88F9;&#x6C0F;&#x4E09;&#x79CD;&#x65B9;&#x5F0F;</li>
+<li>&#x5E94;&#x7528;VarianceThreshold&#x5B9E;&#x73B0;&#x5220;&#x9664;&#x4F4E;&#x65B9;&#x5DEE;&#x7279;&#x5F81;</li>
+<li>&#x4E86;&#x89E3;&#x76F8;&#x5173;&#x7CFB;&#x6570;&#x7684;&#x7279;&#x70B9;&#x548C;&#x8BA1;&#x7B97;</li>
+<li>&#x5E94;&#x7528;&#x76F8;&#x5173;&#x6027;&#x7CFB;&#x6570;&#x5B9E;&#x73B0;&#x7279;&#x5F81;&#x9009;&#x62E9;</li>
+</ul>
+</li>
+<li>&#x5E94;&#x7528;<ul>
+<li>&#x65E0;</li>
+</ul>
+</li>
+</ul>
+<h2 id="251-&#x964D;&#x7EF4;">2.5.1 &#x964D;&#x7EF4;</h2>
+<p><strong>&#x964D;&#x7EF4;</strong>&#x662F;&#x6307;&#x5728;&#x67D0;&#x4E9B;&#x9650;&#x5B9A;&#x6761;&#x4EF6;&#x4E0B;&#xFF0C;<strong>&#x964D;&#x4F4E;&#x968F;&#x673A;&#x53D8;&#x91CF;(&#x7279;&#x5F81;)&#x4E2A;&#x6570;</strong>&#xFF0C;&#x5F97;&#x5230;<strong>&#x4E00;&#x7EC4;&#x201C;&#x4E0D;&#x76F8;&#x5173;&#x201D;&#x4E3B;&#x53D8;&#x91CF;</strong>&#x7684;&#x8FC7;&#x7A0B;</p>
+<ul>
+<li>&#x964D;&#x4F4E;&#x968F;&#x673A;&#x53D8;&#x91CF;&#x7684;&#x4E2A;&#x6570;</li>
+</ul>
+<p><img src="../images/&#x964D;&#x7EF4;.png" alt="&#x964D;&#x7EF4;"></p>
+<ul>
+<li>&#x76F8;&#x5173;&#x7279;&#x5F81;(correlated feature)<ul>
+<li>&#x76F8;&#x5BF9;&#x6E7F;&#x5EA6;&#x4E0E;&#x964D;&#x96E8;&#x91CF;&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5173;</li>
+<li>&#x7B49;&#x7B49;</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>&#x6B63;&#x662F;&#x56E0;&#x4E3A;&#x5728;&#x8FDB;&#x884C;&#x8BAD;&#x7EC3;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x90FD;&#x662F;&#x4F7F;&#x7528;&#x7279;&#x5F81;&#x8FDB;&#x884C;&#x5B66;&#x4E60;&#x3002;&#x5982;&#x679C;&#x7279;&#x5F81;&#x672C;&#x8EAB;&#x5B58;&#x5728;&#x95EE;&#x9898;&#x6216;&#x8005;&#x7279;&#x5F81;&#x4E4B;&#x95F4;&#x76F8;&#x5173;&#x6027;&#x8F83;&#x5F3A;&#xFF0C;&#x5BF9;&#x4E8E;&#x7B97;&#x6CD5;&#x5B66;&#x4E60;&#x9884;&#x6D4B;&#x4F1A;&#x5F71;&#x54CD;&#x8F83;&#x5927;</p>
+</blockquote>
+<h2 id="252-&#x964D;&#x7EF4;&#x7684;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;">2.5.2 &#x964D;&#x7EF4;&#x7684;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;</h2>
+<ul>
+<li><strong>&#x7279;&#x5F81;&#x9009;&#x62E9;</strong></li>
+<li><strong>&#x4E3B;&#x6210;&#x5206;&#x5206;&#x6790;&#xFF08;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E00;&#x79CD;&#x7279;&#x5F81;&#x63D0;&#x53D6;&#x7684;&#x65B9;&#x5F0F;&#xFF09;</strong></li>
+</ul>
+<h2 id="253-&#x4EC0;&#x4E48;&#x662F;&#x7279;&#x5F81;&#x9009;&#x62E9;">2.5.3 &#x4EC0;&#x4E48;&#x662F;&#x7279;&#x5F81;&#x9009;&#x62E9;</h2>
+<h3 id="1-&#x5B9A;&#x4E49;">1 &#x5B9A;&#x4E49;</h3>
+<p>&#x6570;&#x636E;&#x4E2D;&#x5305;&#x542B;<strong>&#x5197;&#x4F59;&#x6216;&#x65E0;&#x5173;&#x53D8;&#x91CF;&#xFF08;&#x6216;&#x79F0;&#x7279;&#x5F81;&#x3001;&#x5C5E;&#x6027;&#x3001;&#x6307;&#x6807;&#x7B49;&#xFF09;</strong>&#xFF0C;&#x65E8;&#x5728;&#x4ECE;<strong>&#x539F;&#x6709;&#x7279;&#x5F81;&#x4E2D;&#x627E;&#x51FA;&#x4E3B;&#x8981;&#x7279;&#x5F81;</strong>&#x3002;</p>
+<p><img src="../images/&#x9E1F;&#x7C7B;&#x7279;&#x5F81;&#x9009;&#x62E9;.png" alt="&#x9E1F;&#x7C7B;&#x7279;&#x5F81;&#x9009;&#x62E9;"></p>
+<h3 id="2-&#x65B9;&#x6CD5;">2 &#x65B9;&#x6CD5;</h3>
+<ul>
+<li><strong>Filter(&#x8FC7;&#x6EE4;&#x5F0F;)&#xFF1A;&#x4E3B;&#x8981;&#x63A2;&#x7A76;&#x7279;&#x5F81;&#x672C;&#x8EAB;&#x7279;&#x70B9;&#x3001;&#x7279;&#x5F81;&#x4E0E;&#x7279;&#x5F81;&#x548C;&#x76EE;&#x6807;&#x503C;&#x4E4B;&#x95F4;&#x5173;&#x8054;</strong><ul>
+<li><strong>&#x65B9;&#x5DEE;&#x9009;&#x62E9;&#x6CD5;&#xFF1A;&#x4F4E;&#x65B9;&#x5DEE;&#x7279;&#x5F81;&#x8FC7;&#x6EE4;</strong></li>
+<li><strong>&#x76F8;&#x5173;&#x7CFB;&#x6570;</strong></li>
+</ul>
+</li>
+<li><strong>Embedded (&#x5D4C;&#x5165;&#x5F0F;)&#xFF1A;&#x7B97;&#x6CD5;&#x81EA;&#x52A8;&#x9009;&#x62E9;&#x7279;&#x5F81;&#xFF08;&#x7279;&#x5F81;&#x4E0E;&#x76EE;&#x6807;&#x503C;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x8054;&#xFF09;</strong><ul>
+<li><strong>&#x51B3;&#x7B56;&#x6811;:&#x4FE1;&#x606F;&#x71B5;&#x3001;&#x4FE1;&#x606F;&#x589E;&#x76CA;</strong></li>
+<li><strong>&#x6B63;&#x5219;&#x5316;&#xFF1A;L1&#x3001;L2</strong></li>
+<li><strong>&#x6DF1;&#x5EA6;&#x5B66;&#x4E60;&#xFF1A;&#x5377;&#x79EF;&#x7B49;</strong></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>&#x5BF9;&#x4E8E;Embedded&#x65B9;&#x5F0F;&#xFF0C;&#x53EA;&#x80FD;&#x5728;&#x8BB2;&#x89E3;&#x7B97;&#x6CD5;&#x7684;&#x65F6;&#x5019;&#x5728;&#x8FDB;&#x884C;&#x4ECB;&#x7ECD;&#xFF0C;&#x66F4;&#x597D;&#x7684;&#x53BB;&#x7406;&#x89E3;</p>
+</blockquote>
+<h3 id="3-&#x6A21;&#x5757;">3 &#x6A21;&#x5757;</h3>
+<pre><code class="lang-python">sklearn.feature_selection
+</code></pre>
+<h3 id="4-&#x8FC7;&#x6EE4;&#x5F0F;">4 &#x8FC7;&#x6EE4;&#x5F0F;</h3>
+<h4 id="41-&#x4F4E;&#x65B9;&#x5DEE;&#x7279;&#x5F81;&#x8FC7;&#x6EE4;">4.1 &#x4F4E;&#x65B9;&#x5DEE;&#x7279;&#x5F81;&#x8FC7;&#x6EE4;</h4>
+<p>&#x5220;&#x9664;&#x4F4E;&#x65B9;&#x5DEE;&#x7684;&#x4E00;&#x4E9B;&#x7279;&#x5F81;&#xFF0C;&#x524D;&#x9762;&#x8BB2;&#x8FC7;&#x65B9;&#x5DEE;&#x7684;&#x610F;&#x4E49;&#x3002;&#x518D;&#x7ED3;&#x5408;&#x65B9;&#x5DEE;&#x7684;&#x5927;&#x5C0F;&#x6765;&#x8003;&#x8651;&#x8FD9;&#x4E2A;&#x65B9;&#x5F0F;&#x7684;&#x89D2;&#x5EA6;&#x3002;</p>
+<ul>
+<li>&#x7279;&#x5F81;&#x65B9;&#x5DEE;&#x5C0F;&#xFF1A;&#x67D0;&#x4E2A;&#x7279;&#x5F81;&#x5927;&#x591A;&#x6837;&#x672C;&#x7684;&#x503C;&#x6BD4;&#x8F83;&#x76F8;&#x8FD1;</li>
+<li>&#x7279;&#x5F81;&#x65B9;&#x5DEE;&#x5927;&#xFF1A;&#x67D0;&#x4E2A;&#x7279;&#x5F81;&#x5F88;&#x591A;&#x6837;&#x672C;&#x7684;&#x503C;&#x90FD;&#x6709;&#x5DEE;&#x522B;</li>
+</ul>
+<h5 id="411-api">4.1.1 API</h5>
+<ul>
+<li>sklearn.feature_selection.VarianceThreshold(threshold = 0.0) <ul>
+<li>&#x5220;&#x9664;&#x6240;&#x6709;&#x4F4E;&#x65B9;&#x5DEE;&#x7279;&#x5F81; </li>
+<li>Variance.fit_transform(X)       <ul>
+<li>X:numpy array&#x683C;&#x5F0F;&#x7684;&#x6570;&#x636E;[n_samples,n_features]</li>
+<li>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x8BAD;&#x7EC3;&#x96C6;&#x5DEE;&#x5F02;&#x4F4E;&#x4E8E;threshold&#x7684;&#x7279;&#x5F81;&#x5C06;&#x88AB;&#x5220;&#x9664;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x662F;&#x4FDD;&#x7559;&#x6240;&#x6709;&#x975E;&#x96F6;&#x65B9;&#x5DEE;&#x7279;&#x5F81;&#xFF0C;&#x5373;&#x5220;&#x9664;&#x6240;&#x6709;&#x6837;&#x672C;&#x4E2D;&#x5177;&#x6709;&#x76F8;&#x540C;&#x503C;&#x7684;&#x7279;&#x5F81;&#x3002;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="412-&#x6570;&#x636E;&#x8BA1;&#x7B97;">4.1.2 &#x6570;&#x636E;&#x8BA1;&#x7B97;</h5>
+<p>&#x6211;&#x4EEC;&#x5BF9;<strong>&#x67D0;&#x4E9B;&#x80A1;&#x7968;&#x7684;&#x6307;&#x6807;&#x7279;&#x5F81;&#x4E4B;&#x95F4;&#x8FDB;&#x884C;&#x4E00;&#x4E2A;&#x7B5B;&#x9009;</strong>&#xFF0C;&#x6570;&#x636E;&#x5728;&quot;factor_regression_data/factor_returns.csv&quot;&#x6587;&#x4EF6;&#x5F53;&#x4E2D;,&#x9664;&#x53BB;&apos;index,&apos;date&apos;,&apos;return&apos;&#x5217;&#x4E0D;&#x8003;&#x8651;<strong>&#xFF08;&#x8FD9;&#x4E9B;&#x7C7B;&#x578B;&#x4E0D;&#x5339;&#x914D;&#xFF0C;&#x4E5F;&#x4E0D;&#x662F;&#x6240;&#x9700;&#x8981;&#x6307;&#x6807;&#xFF09;</strong></p>
+<p>&#x4E00;&#x5171;&#x8FD9;&#x4E9B;&#x7279;&#x5F81;</p>
+<pre><code>pe_ratio,pb_ratio,market_cap,return_on_asset_net_profit,du_return_on_equity,ev,earnings_per_share,revenue,total_expense
+</code></pre><pre><code class="lang-python">index,pe_ratio,pb_ratio,market_cap,return_on_asset_net_profit,du_return_on_equity,ev,earnings_per_share,revenue,total_expense,date,<span class="hljs-keyword">return</span>
+<span class="hljs-number">0</span>,<span class="hljs-number">000001.</span>XSHE,<span class="hljs-number">5.9572</span>,<span class="hljs-number">1.1818</span>,<span class="hljs-number">85252550922.0</span>,<span class="hljs-number">0.8008</span>,<span class="hljs-number">14.9403</span>,<span class="hljs-number">1211444855670.0</span>,<span class="hljs-number">2.01</span>,<span class="hljs-number">20701401000.0</span>,<span class="hljs-number">10882540000.0</span>,<span class="hljs-number">2012</span>-<span class="hljs-number">01</span>-<span class="hljs-number">31</span>,<span class="hljs-number">0.027657228229937388</span>
+<span class="hljs-number">1</span>,<span class="hljs-number">000002.</span>XSHE,<span class="hljs-number">7.0289</span>,<span class="hljs-number">1.588</span>,<span class="hljs-number">84113358168.0</span>,<span class="hljs-number">1.6463</span>,<span class="hljs-number">7.8656</span>,<span class="hljs-number">300252061695.0</span>,<span class="hljs-number">0.326</span>,<span class="hljs-number">29308369223.2</span>,<span class="hljs-number">23783476901.2</span>,<span class="hljs-number">2012</span>-<span class="hljs-number">01</span>-<span class="hljs-number">31</span>,<span class="hljs-number">0.08235182370820669</span>
+<span class="hljs-number">2</span>,<span class="hljs-number">000008.</span>XSHE,-<span class="hljs-number">262.7461</span>,<span class="hljs-number">7.0003</span>,<span class="hljs-number">517045520.0</span>,-<span class="hljs-number">0.5678</span>,-<span class="hljs-number">0.5943</span>,<span class="hljs-number">770517752.56</span>,-<span class="hljs-number">0.006</span>,<span class="hljs-number">11679829.03</span>,<span class="hljs-number">12030080.04</span>,<span class="hljs-number">2012</span>-<span class="hljs-number">01</span>-<span class="hljs-number">31</span>,<span class="hljs-number">0.09978900335112327</span>
+<span class="hljs-number">3</span>,<span class="hljs-number">000060.</span>XSHE,<span class="hljs-number">16.476</span>,<span class="hljs-number">3.7146</span>,<span class="hljs-number">19680455995.0</span>,<span class="hljs-number">5.6036</span>,<span class="hljs-number">14.617</span>,<span class="hljs-number">28009159184.6</span>,<span class="hljs-number">0.35</span>,<span class="hljs-number">9189386877.65</span>,<span class="hljs-number">7935542726.05</span>,<span class="hljs-number">2012</span>-<span class="hljs-number">01</span>-<span class="hljs-number">31</span>,<span class="hljs-number">0.12159482758620697</span>
+<span class="hljs-number">4</span>,<span class="hljs-number">000069.</span>XSHE,<span class="hljs-number">12.5878</span>,<span class="hljs-number">2.5616</span>,<span class="hljs-number">41727214853.0</span>,<span class="hljs-number">2.8729</span>,<span class="hljs-number">10.9097</span>,<span class="hljs-number">81247380359.0</span>,<span class="hljs-number">0.271</span>,<span class="hljs-number">8951453490.28</span>,<span class="hljs-number">7091397989.13</span>,<span class="hljs-number">2012</span>-<span class="hljs-number">01</span>-<span class="hljs-number">31</span>,-<span class="hljs-number">0.0026808154146886697</span>
+</code></pre>
+<ul>
+<li>&#x5206;&#x6790;</li>
+</ul>
+<p>1&#x3001;&#x521D;&#x59CB;&#x5316;VarianceThreshold,&#x6307;&#x5B9A;&#x9600;&#x503C;&#x65B9;&#x5DEE; </p>
+<p>2&#x3001;&#x8C03;&#x7528;fit_transform</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">variance_demo</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x5220;&#x9664;&#x4F4E;&#x65B9;&#x5DEE;&#x7279;&#x5F81;&#x2014;&#x2014;&#x7279;&#x5F81;&#x9009;&#x62E9;
+    :return: None
+    &quot;&quot;&quot;</span>
+    data = pd.read_csv(<span class="hljs-string">&quot;factor_returns.csv&quot;</span>)
+    print(data)
+    <span class="hljs-comment"># 1&#x3001;&#x5B9E;&#x4F8B;&#x5316;&#x4E00;&#x4E2A;&#x8F6C;&#x6362;&#x5668;&#x7C7B;</span>
+    transfer = VarianceThreshold(threshold=<span class="hljs-number">1</span>)
+    <span class="hljs-comment"># 2&#x3001;&#x8C03;&#x7528;fit_transform</span>
+    data = transfer.fit_transform(data.iloc[:, <span class="hljs-number">1</span>:<span class="hljs-number">10</span>])
+    print(<span class="hljs-string">&quot;&#x5220;&#x9664;&#x4F4E;&#x65B9;&#x5DEE;&#x7279;&#x5F81;&#x7684;&#x7ED3;&#x679C;&#xFF1A;\n&quot;</span>, data)
+    print(<span class="hljs-string">&quot;&#x5F62;&#x72B6;&#xFF1A;\n&quot;</span>, data.shape)
+
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">None</span>
+</code></pre>
+<p>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-python">            index  pe_ratio  pb_ratio    market_cap  \
+<span class="hljs-number">0</span>     <span class="hljs-number">000001.</span>XSHE    <span class="hljs-number">5.9572</span>    <span class="hljs-number">1.1818</span>  <span class="hljs-number">8.525255e+10</span>   
+<span class="hljs-number">1</span>     <span class="hljs-number">000002.</span>XSHE    <span class="hljs-number">7.0289</span>    <span class="hljs-number">1.5880</span>  <span class="hljs-number">8.411336e+10</span>    
+<span class="hljs-prompt">... </span>          ...       ...       ...           ...   
+<span class="hljs-number">2316</span>  <span class="hljs-number">601958.</span>XSHG   <span class="hljs-number">52.5408</span>    <span class="hljs-number">2.4646</span>  <span class="hljs-number">3.287910e+10</span>   
+<span class="hljs-number">2317</span>  <span class="hljs-number">601989.</span>XSHG   <span class="hljs-number">14.2203</span>    <span class="hljs-number">1.4103</span>  <span class="hljs-number">5.911086e+10</span>   
+
+      return_on_asset_net_profit  du_return_on_equity            ev  \
+<span class="hljs-number">0</span>                         <span class="hljs-number">0.8008</span>              <span class="hljs-number">14.9403</span>  <span class="hljs-number">1.211445e+12</span>   
+<span class="hljs-number">1</span>                         <span class="hljs-number">1.6463</span>               <span class="hljs-number">7.8656</span>  <span class="hljs-number">3.002521e+11</span>    
+<span class="hljs-prompt">... </span>                         ...                  ...           ...   
+<span class="hljs-number">2316</span>                      <span class="hljs-number">2.7444</span>               <span class="hljs-number">2.9202</span>  <span class="hljs-number">3.883803e+10</span>   
+<span class="hljs-number">2317</span>                      <span class="hljs-number">2.0383</span>               <span class="hljs-number">8.6179</span>  <span class="hljs-number">2.020661e+11</span>   
+
+      earnings_per_share       revenue  total_expense        date    <span class="hljs-keyword">return</span>  
+<span class="hljs-number">0</span>                 <span class="hljs-number">2.0100</span>  <span class="hljs-number">2.070140e+10</span>   <span class="hljs-number">1.088254e+10</span>  <span class="hljs-number">2012</span>-<span class="hljs-number">01</span>-<span class="hljs-number">31</span>  <span class="hljs-number">0.027657</span>  
+<span class="hljs-number">1</span>                 <span class="hljs-number">0.3260</span>  <span class="hljs-number">2.930837e+10</span>   <span class="hljs-number">2.378348e+10</span>  <span class="hljs-number">2012</span>-<span class="hljs-number">01</span>-<span class="hljs-number">31</span>  <span class="hljs-number">0.082352</span>  
+<span class="hljs-number">2</span>                -<span class="hljs-number">0.0060</span>  <span class="hljs-number">1.167983e+07</span>   <span class="hljs-number">1.203008e+07</span>  <span class="hljs-number">2012</span>-<span class="hljs-number">01</span>-<span class="hljs-number">31</span>  <span class="hljs-number">0.099789</span>   
+<span class="hljs-prompt">... </span>                 ...           ...            ...         ...       ...  
+<span class="hljs-number">2315</span>              <span class="hljs-number">0.2200</span>  <span class="hljs-number">1.789082e+10</span>   <span class="hljs-number">1.749295e+10</span>  <span class="hljs-number">2012</span>-<span class="hljs-number">11</span>-<span class="hljs-number">30</span>  <span class="hljs-number">0.137134</span>  
+<span class="hljs-number">2316</span>              <span class="hljs-number">0.1210</span>  <span class="hljs-number">6.465392e+09</span>   <span class="hljs-number">6.009007e+09</span>  <span class="hljs-number">2012</span>-<span class="hljs-number">11</span>-<span class="hljs-number">30</span>  <span class="hljs-number">0.149167</span>  
+<span class="hljs-number">2317</span>              <span class="hljs-number">0.2470</span>  <span class="hljs-number">4.509872e+10</span>   <span class="hljs-number">4.132842e+10</span>  <span class="hljs-number">2012</span>-<span class="hljs-number">11</span>-<span class="hljs-number">30</span>  <span class="hljs-number">0.183629</span>  
+
+[<span class="hljs-number">2318</span> rows x <span class="hljs-number">12</span> columns]
+&#x5220;&#x9664;&#x4F4E;&#x65B9;&#x5DEE;&#x7279;&#x5F81;&#x7684;&#x7ED3;&#x679C;&#xFF1A;
+ [[  <span class="hljs-number">5.95720000e+00</span>   <span class="hljs-number">1.18180000e+00</span>   <span class="hljs-number">8.52525509e+10</span> ...,   <span class="hljs-number">1.21144486e+12</span>
+    <span class="hljs-number">2.07014010e+10</span>   <span class="hljs-number">1.08825400e+10</span>]
+ [  <span class="hljs-number">7.02890000e+00</span>   <span class="hljs-number">1.58800000e+00</span>   <span class="hljs-number">8.41133582e+10</span> ...,   <span class="hljs-number">3.00252062e+11</span>
+    <span class="hljs-number">2.93083692e+10</span>   <span class="hljs-number">2.37834769e+10</span>]
+ [ -<span class="hljs-number">2.62746100e+02</span>   <span class="hljs-number">7.00030000e+00</span>   <span class="hljs-number">5.17045520e+08</span> ...,   <span class="hljs-number">7.70517753e+08</span>
+    <span class="hljs-number">1.16798290e+07</span>   <span class="hljs-number">1.20300800e+07</span>]
+ ..., 
+ [  <span class="hljs-number">3.95523000e+01</span>   <span class="hljs-number">4.00520000e+00</span>   <span class="hljs-number">1.70243430e+10</span> ...,   <span class="hljs-number">2.42081699e+10</span>
+    <span class="hljs-number">1.78908166e+10</span>   <span class="hljs-number">1.74929478e+10</span>]
+ [  <span class="hljs-number">5.25408000e+01</span>   <span class="hljs-number">2.46460000e+00</span>   <span class="hljs-number">3.28790988e+10</span> ...,   <span class="hljs-number">3.88380258e+10</span>
+    <span class="hljs-number">6.46539204e+09</span>   <span class="hljs-number">6.00900728e+09</span>]
+ [  <span class="hljs-number">1.42203000e+01</span>   <span class="hljs-number">1.41030000e+00</span>   <span class="hljs-number">5.91108572e+10</span> ...,   <span class="hljs-number">2.02066110e+11</span>
+    <span class="hljs-number">4.50987171e+10</span>   <span class="hljs-number">4.13284212e+10</span>]]
+&#x5F62;&#x72B6;&#xFF1A;
+ (<span class="hljs-number">2318</span>, <span class="hljs-number">8</span>)
+</code></pre>
+<h4 id="42-&#x76F8;&#x5173;&#x7CFB;&#x6570;">4.2 &#x76F8;&#x5173;&#x7CFB;&#x6570;</h4>
+<ul>
+<li>&#x76AE;&#x5C14;&#x900A;&#x76F8;&#x5173;&#x7CFB;&#x6570;(Pearson Correlation Coefficient)<ul>
+<li>&#x53CD;&#x6620;&#x53D8;&#x91CF;&#x4E4B;&#x95F4;&#x76F8;&#x5173;&#x5173;&#x7CFB;&#x5BC6;&#x5207;&#x7A0B;&#x5EA6;&#x7684;&#x7EDF;&#x8BA1;&#x6307;&#x6807;</li>
+</ul>
+</li>
+</ul>
+<h5 id="422-&#x516C;&#x5F0F;&#x8BA1;&#x7B97;&#x6848;&#x4F8B;&#x4E86;&#x89E3;&#xFF0C;&#x4E0D;&#x7528;&#x8BB0;&#x5FC6;">4.2.2 &#x516C;&#x5F0F;&#x8BA1;&#x7B97;&#x6848;&#x4F8B;(&#x4E86;&#x89E3;&#xFF0C;&#x4E0D;&#x7528;&#x8BB0;&#x5FC6;)</h5>
+<ul>
+<li>&#x516C;&#x5F0F;</li>
+</ul>
+<p><img src="../images/&#x76F8;&#x5173;&#x7CFB;&#x6570;&#x516C;&#x5F0F;.png" alt="&#x76F8;&#x5173;&#x7CFB;&#x6570;&#x516C;&#x5F0F;"></p>
+<ul>
+<li>&#x6BD4;&#x5982;&#x8BF4;&#x6211;&#x4EEC;&#x8BA1;&#x7B97;&#x5E74;&#x5E7F;&#x544A;&#x8D39;&#x6295;&#x5165;&#x4E0E;&#x6708;&#x5747;&#x9500;&#x552E;&#x989D;</li>
+</ul>
+<p><img src="../images/&#x5E7F;&#x544A;&#x8D39;&#x8868;.png" alt="&#x5E7F;&#x544A;&#x8D39;&#x8868;"></p>
+<p>&#x90A3;&#x4E48;&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5173;&#x7CFB;&#x6570;&#x600E;&#x4E48;&#x8BA1;&#x7B97;</p>
+<p><img src="../images/&#x5E7F;&#x544A;&#x8D39;&#x7EDF;&#x8BA1;&#x7CFB;&#x6570;&#x7ED3;&#x679C;.png" alt="&#x5E7F;&#x544A;&#x8D39;&#x7EDF;&#x8BA1;&#x7CFB;&#x6570;&#x7ED3;&#x679C;"></p>
+<p>&#x6700;&#x7EC8;&#x8BA1;&#x7B97;&#xFF1A;</p>
+<p><img src="../images/&#x76F8;&#x5173;&#x7CFB;&#x6570;&#x8BA1;&#x7B97;&#x6570;&#x5B57;&#x7ED3;&#x679C;.png" alt="&#x76F8;&#x5173;&#x7CFB;&#x6570;&#x8BA1;&#x7B97;&#x6570;&#x5B57;&#x7ED3;&#x679C;"></p>
+<p>= 0.9942</p>
+<p><strong>&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x6700;&#x7EC8;&#x5F97;&#x51FA;&#x7ED3;&#x8BBA;&#x662F;&#x5E7F;&#x544A;&#x6295;&#x5165;&#x8D39;&#x4E0E;&#x6708;&#x5E73;&#x5747;&#x9500;&#x552E;&#x989D;&#x4E4B;&#x95F4;&#x6709;&#x9AD8;&#x5EA6;&#x7684;&#x6B63;&#x76F8;&#x5173;&#x5173;&#x7CFB;&#x3002;</strong> &#x3000;&#x3000;</p>
+<h5 id="423-&#x7279;&#x70B9;">4.2.3 &#x7279;&#x70B9;</h5>
+<p><strong>&#x76F8;&#x5173;&#x7CFB;&#x6570;&#x7684;&#x503C;&#x4ECB;&#x4E8E;&#x2013;1&#x4E0E;+1&#x4E4B;&#x95F4;&#xFF0C;&#x5373;&#x2013;1&#x2264; r &#x2264;+1</strong>&#x3002;&#x5176;&#x6027;&#x8D28;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li><strong>&#x5F53;r&gt;0&#x65F6;&#xFF0C;&#x8868;&#x793A;&#x4E24;&#x53D8;&#x91CF;&#x6B63;&#x76F8;&#x5173;&#xFF0C;r&lt;0&#x65F6;&#xFF0C;&#x4E24;&#x53D8;&#x91CF;&#x4E3A;&#x8D1F;&#x76F8;&#x5173;</strong></li>
+<li>&#x5F53;|r|=1&#x65F6;&#xFF0C;&#x8868;&#x793A;&#x4E24;&#x53D8;&#x91CF;&#x4E3A;&#x5B8C;&#x5168;&#x76F8;&#x5173;&#xFF0C;&#x5F53;r=0&#x65F6;&#xFF0C;&#x8868;&#x793A;&#x4E24;&#x53D8;&#x91CF;&#x95F4;&#x65E0;&#x76F8;&#x5173;&#x5173;&#x7CFB;</li>
+<li><strong>&#x5F53;0&lt;|r|&lt;1&#x65F6;&#xFF0C;&#x8868;&#x793A;&#x4E24;&#x53D8;&#x91CF;&#x5B58;&#x5728;&#x4E00;&#x5B9A;&#x7A0B;&#x5EA6;&#x7684;&#x76F8;&#x5173;&#x3002;&#x4E14;|r|&#x8D8A;&#x63A5;&#x8FD1;1&#xFF0C;&#x4E24;&#x53D8;&#x91CF;&#x95F4;&#x7EBF;&#x6027;&#x5173;&#x7CFB;&#x8D8A;&#x5BC6;&#x5207;&#xFF1B;|r|&#x8D8A;&#x63A5;&#x8FD1;&#x4E8E;0&#xFF0C;&#x8868;&#x793A;&#x4E24;&#x53D8;&#x91CF;&#x7684;&#x7EBF;&#x6027;&#x76F8;&#x5173;&#x8D8A;&#x5F31;</strong></li>
+<li><strong>&#x4E00;&#x822C;&#x53EF;&#x6309;&#x4E09;&#x7EA7;&#x5212;&#x5206;&#xFF1A;|r|&lt;0.4&#x4E3A;&#x4F4E;&#x5EA6;&#x76F8;&#x5173;&#xFF1B;0.4&#x2264;|r|&lt;0.7&#x4E3A;&#x663E;&#x8457;&#x6027;&#x76F8;&#x5173;&#xFF1B;0.7&#x2264;|r|&lt;1&#x4E3A;&#x9AD8;&#x5EA6;&#x7EBF;&#x6027;&#x76F8;&#x5173;</strong></li>
+</ul>
+<blockquote>
+<p>&#x8FD9;&#x4E2A;&#x7B26;&#x53F7;&#xFF1A;|r|&#x4E3A;r&#x7684;&#x7EDD;&#x5BF9;&#x503C;&#xFF0C; |-5| = 5</p>
+</blockquote>
+<h5 id="424-api">4.2.4 API</h5>
+<ul>
+<li>from scipy.stats import pearsonr<ul>
+<li>x : (N,) array_like</li>
+<li>y : (N,) array_like
+   Returns:    (Pearson&#x2019;s correlation coefficient, p-value)</li>
+</ul>
+</li>
+</ul>
+<h5 id="425-&#x6848;&#x4F8B;&#xFF1A;&#x80A1;&#x7968;&#x7684;&#x8D22;&#x52A1;&#x6307;&#x6807;&#x76F8;&#x5173;&#x6027;&#x8BA1;&#x7B97;">4.2.5 &#x6848;&#x4F8B;&#xFF1A;&#x80A1;&#x7968;&#x7684;&#x8D22;&#x52A1;&#x6307;&#x6807;&#x76F8;&#x5173;&#x6027;&#x8BA1;&#x7B97;</h5>
+<p>&#x6211;&#x4EEC;&#x521A;&#x624D;&#x7684;&#x80A1;&#x7968;&#x7684;&#x8FD9;&#x4E9B;&#x6307;&#x6807;&#x8FDB;&#x884C;&#x76F8;&#x5173;&#x6027;&#x8BA1;&#x7B97;&#xFF0C; &#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x4EE5;</p>
+<pre><code class="lang-python">factor = [<span class="hljs-string">&apos;pe_ratio&apos;</span>,<span class="hljs-string">&apos;pb_ratio&apos;</span>,<span class="hljs-string">&apos;market_cap&apos;</span>,<span class="hljs-string">&apos;return_on_asset_net_profit&apos;</span>,<span class="hljs-string">&apos;du_return_on_equity&apos;</span>,<span class="hljs-string">&apos;ev&apos;</span>,<span class="hljs-string">&apos;earnings_per_share&apos;</span>,<span class="hljs-string">&apos;revenue&apos;</span>,<span class="hljs-string">&apos;total_expense&apos;</span>]
+</code></pre>
+<p>&#x8FD9;&#x4E9B;&#x7279;&#x5F81;&#x5F53;&#x4E2D;&#x7684;&#x4E24;&#x4E24;&#x8FDB;&#x884C;&#x8BA1;&#x7B97;&#xFF0C;&#x5F97;&#x51FA;&#x76F8;&#x5173;&#x6027;&#x9AD8;&#x7684;&#x4E00;&#x4E9B;&#x7279;&#x5F81;</p>
+<p><img src="../images/&#x6307;&#x6807;&#x76F8;&#x5173;&#x6027;&#x7ED3;&#x679C;.png" alt="&#x6307;&#x6807;&#x76F8;&#x5173;&#x6027;&#x7ED3;&#x679C;"></p>
+<ul>
+<li>&#x5206;&#x6790;<ul>
+<li>&#x4E24;&#x4E24;&#x7279;&#x5F81;&#x4E4B;&#x95F4;&#x8FDB;&#x884C;&#x76F8;&#x5173;&#x6027;&#x8BA1;&#x7B97;</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
+<span class="hljs-keyword">from</span> scipy.stats <span class="hljs-keyword">import</span> pearsonr
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">pearsonr_demo</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x76F8;&#x5173;&#x7CFB;&#x6570;&#x8BA1;&#x7B97;
+    :return: None
+    &quot;&quot;&quot;</span>
+    data = pd.read_csv(<span class="hljs-string">&quot;factor_returns.csv&quot;</span>)
+
+    factor = [<span class="hljs-string">&apos;pe_ratio&apos;</span>, <span class="hljs-string">&apos;pb_ratio&apos;</span>, <span class="hljs-string">&apos;market_cap&apos;</span>, <span class="hljs-string">&apos;return_on_asset_net_profit&apos;</span>, <span class="hljs-string">&apos;du_return_on_equity&apos;</span>, <span class="hljs-string">&apos;ev&apos;</span>,
+              <span class="hljs-string">&apos;earnings_per_share&apos;</span>, <span class="hljs-string">&apos;revenue&apos;</span>, <span class="hljs-string">&apos;total_expense&apos;</span>]
+
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(factor)):
+        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(i, len(factor) - <span class="hljs-number">1</span>):
+            print(
+                <span class="hljs-string">&quot;&#x6307;&#x6807;%s&#x4E0E;&#x6307;&#x6807;%s&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5173;&#x6027;&#x5927;&#x5C0F;&#x4E3A;%f&quot;</span> % (factor[i], factor[j + <span class="hljs-number">1</span>], pearsonr(data[factor[i]], data[factor[j + <span class="hljs-number">1</span>]])[<span class="hljs-number">0</span>]))
+
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">None</span>
+</code></pre>
+<p>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-python">&#x6307;&#x6807;pe_ratio&#x4E0E;&#x6307;&#x6807;pb_ratio&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5173;&#x6027;&#x5927;&#x5C0F;&#x4E3A;-<span class="hljs-number">0.004389</span>
+&#x6307;&#x6807;pe_ratio&#x4E0E;&#x6307;&#x6807;market_cap&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5173;&#x6027;&#x5927;&#x5C0F;&#x4E3A;-<span class="hljs-number">0.068861</span>
+&#x6307;&#x6807;pe_ratio&#x4E0E;&#x6307;&#x6807;return_on_asset_net_profit&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5173;&#x6027;&#x5927;&#x5C0F;&#x4E3A;-<span class="hljs-number">0.066009</span>
+&#x6307;&#x6807;pe_ratio&#x4E0E;&#x6307;&#x6807;du_return_on_equity&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5173;&#x6027;&#x5927;&#x5C0F;&#x4E3A;-<span class="hljs-number">0.082364</span>
+&#x6307;&#x6807;pe_ratio&#x4E0E;&#x6307;&#x6807;ev&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5173;&#x6027;&#x5927;&#x5C0F;&#x4E3A;-<span class="hljs-number">0.046159</span>
+&#x6307;&#x6807;pe_ratio&#x4E0E;&#x6307;&#x6807;earnings_per_share&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5173;&#x6027;&#x5927;&#x5C0F;&#x4E3A;-<span class="hljs-number">0.072082</span>
+&#x6307;&#x6807;pe_ratio&#x4E0E;&#x6307;&#x6807;revenue&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5173;&#x6027;&#x5927;&#x5C0F;&#x4E3A;-<span class="hljs-number">0.058693</span>
+&#x6307;&#x6807;pe_ratio&#x4E0E;&#x6307;&#x6807;total_expense&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5173;&#x6027;&#x5927;&#x5C0F;&#x4E3A;-<span class="hljs-number">0.055551</span>
+&#x6307;&#x6807;pb_ratio&#x4E0E;&#x6307;&#x6807;market_cap&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5173;&#x6027;&#x5927;&#x5C0F;&#x4E3A;<span class="hljs-number">0.009336</span>
+&#x6307;&#x6807;pb_ratio&#x4E0E;&#x6307;&#x6807;return_on_asset_net_profit&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5173;&#x6027;&#x5927;&#x5C0F;&#x4E3A;<span class="hljs-number">0.445381</span>
+&#x6307;&#x6807;pb_ratio&#x4E0E;&#x6307;&#x6807;du_return_on_equity&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5173;&#x6027;&#x5927;&#x5C0F;&#x4E3A;<span class="hljs-number">0.291367</span>
+&#x6307;&#x6807;pb_ratio&#x4E0E;&#x6307;&#x6807;ev&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5173;&#x6027;&#x5927;&#x5C0F;&#x4E3A;-<span class="hljs-number">0.183232</span>
+&#x6307;&#x6807;pb_ratio&#x4E0E;&#x6307;&#x6807;earnings_per_share&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5173;&#x6027;&#x5927;&#x5C0F;&#x4E3A;<span class="hljs-number">0.198708</span>
+&#x6307;&#x6807;pb_ratio&#x4E0E;&#x6307;&#x6807;revenue&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5173;&#x6027;&#x5927;&#x5C0F;&#x4E3A;-<span class="hljs-number">0.177671</span>
+&#x6307;&#x6807;pb_ratio&#x4E0E;&#x6307;&#x6807;total_expense&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5173;&#x6027;&#x5927;&#x5C0F;&#x4E3A;-<span class="hljs-number">0.173339</span>
+&#x6307;&#x6807;market_cap&#x4E0E;&#x6307;&#x6807;return_on_asset_net_profit&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5173;&#x6027;&#x5927;&#x5C0F;&#x4E3A;<span class="hljs-number">0.214774</span>
+&#x6307;&#x6807;market_cap&#x4E0E;&#x6307;&#x6807;du_return_on_equity&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5173;&#x6027;&#x5927;&#x5C0F;&#x4E3A;<span class="hljs-number">0.316288</span>
+&#x6307;&#x6807;market_cap&#x4E0E;&#x6307;&#x6807;ev&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5173;&#x6027;&#x5927;&#x5C0F;&#x4E3A;<span class="hljs-number">0.565533</span>
+&#x6307;&#x6807;market_cap&#x4E0E;&#x6307;&#x6807;earnings_per_share&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5173;&#x6027;&#x5927;&#x5C0F;&#x4E3A;<span class="hljs-number">0.524179</span>
+&#x6307;&#x6807;market_cap&#x4E0E;&#x6307;&#x6807;revenue&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5173;&#x6027;&#x5927;&#x5C0F;&#x4E3A;<span class="hljs-number">0.440653</span>
+&#x6307;&#x6807;market_cap&#x4E0E;&#x6307;&#x6807;total_expense&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5173;&#x6027;&#x5927;&#x5C0F;&#x4E3A;<span class="hljs-number">0.386550</span>
+&#x6307;&#x6807;return_on_asset_net_profit&#x4E0E;&#x6307;&#x6807;du_return_on_equity&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5173;&#x6027;&#x5927;&#x5C0F;&#x4E3A;<span class="hljs-number">0.818697</span>
+&#x6307;&#x6807;return_on_asset_net_profit&#x4E0E;&#x6307;&#x6807;ev&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5173;&#x6027;&#x5927;&#x5C0F;&#x4E3A;-<span class="hljs-number">0.101225</span>
+&#x6307;&#x6807;return_on_asset_net_profit&#x4E0E;&#x6307;&#x6807;earnings_per_share&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5173;&#x6027;&#x5927;&#x5C0F;&#x4E3A;<span class="hljs-number">0.635933</span>
+&#x6307;&#x6807;return_on_asset_net_profit&#x4E0E;&#x6307;&#x6807;revenue&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5173;&#x6027;&#x5927;&#x5C0F;&#x4E3A;<span class="hljs-number">0.038582</span>
+&#x6307;&#x6807;return_on_asset_net_profit&#x4E0E;&#x6307;&#x6807;total_expense&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5173;&#x6027;&#x5927;&#x5C0F;&#x4E3A;<span class="hljs-number">0.027014</span>
+&#x6307;&#x6807;du_return_on_equity&#x4E0E;&#x6307;&#x6807;ev&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5173;&#x6027;&#x5927;&#x5C0F;&#x4E3A;<span class="hljs-number">0.118807</span>
+&#x6307;&#x6807;du_return_on_equity&#x4E0E;&#x6307;&#x6807;earnings_per_share&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5173;&#x6027;&#x5927;&#x5C0F;&#x4E3A;<span class="hljs-number">0.651996</span>
+&#x6307;&#x6807;du_return_on_equity&#x4E0E;&#x6307;&#x6807;revenue&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5173;&#x6027;&#x5927;&#x5C0F;&#x4E3A;<span class="hljs-number">0.163214</span>
+&#x6307;&#x6807;du_return_on_equity&#x4E0E;&#x6307;&#x6807;total_expense&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5173;&#x6027;&#x5927;&#x5C0F;&#x4E3A;<span class="hljs-number">0.135412</span>
+&#x6307;&#x6807;ev&#x4E0E;&#x6307;&#x6807;earnings_per_share&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5173;&#x6027;&#x5927;&#x5C0F;&#x4E3A;<span class="hljs-number">0.196033</span>
+&#x6307;&#x6807;ev&#x4E0E;&#x6307;&#x6807;revenue&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5173;&#x6027;&#x5927;&#x5C0F;&#x4E3A;<span class="hljs-number">0.224363</span>
+&#x6307;&#x6807;ev&#x4E0E;&#x6307;&#x6807;total_expense&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5173;&#x6027;&#x5927;&#x5C0F;&#x4E3A;<span class="hljs-number">0.149857</span>
+&#x6307;&#x6807;earnings_per_share&#x4E0E;&#x6307;&#x6807;revenue&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5173;&#x6027;&#x5927;&#x5C0F;&#x4E3A;<span class="hljs-number">0.141473</span>
+&#x6307;&#x6807;earnings_per_share&#x4E0E;&#x6307;&#x6807;total_expense&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5173;&#x6027;&#x5927;&#x5C0F;&#x4E3A;<span class="hljs-number">0.105022</span>
+&#x6307;&#x6807;revenue&#x4E0E;&#x6307;&#x6807;total_expense&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5173;&#x6027;&#x5927;&#x5C0F;&#x4E3A;<span class="hljs-number">0.995845</span>
+</code></pre>
+<p>&#x4ECE;&#x4E2D;&#x6211;&#x4EEC;&#x5F97;&#x51FA;</p>
+<ul>
+<li>&#x6307;&#x6807;revenue&#x4E0E;&#x6307;&#x6807;total_expense&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5173;&#x6027;&#x5927;&#x5C0F;&#x4E3A;0.995845</li>
+<li>&#x6307;&#x6807;return_on_asset_net_profit&#x4E0E;&#x6307;&#x6807;du_return_on_equity&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5173;&#x6027;&#x5927;&#x5C0F;&#x4E3A;0.818697</li>
+</ul>
+<p>&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x753B;&#x56FE;&#x6765;&#x89C2;&#x5BDF;&#x7ED3;&#x679C;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt
+plt.figure(figsize=(<span class="hljs-number">20</span>, <span class="hljs-number">8</span>), dpi=<span class="hljs-number">100</span>)
+plt.scatter(data[<span class="hljs-string">&apos;revenue&apos;</span>], data[<span class="hljs-string">&apos;total_expense&apos;</span>])
+plt.show()
+</code></pre>
+<p><img src="../images/&#x76F8;&#x5173;&#x7CFB;&#x6570;.png" alt=""></p>
+<p><strong>&#x8FD9;&#x4E24;&#x5BF9;&#x6307;&#x6807;&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5173;&#x6027;&#x8F83;&#x5927;&#xFF0C;&#x53EF;&#x4EE5;&#x505A;&#x4E4B;&#x540E;&#x7684;&#x5904;&#x7406;&#xFF0C;&#x6BD4;&#x5982;&#x5408;&#x6210;&#x8FD9;&#x4E24;&#x4E2A;&#x6307;&#x6807;&#x3002;</strong></p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../day01/section3.html" class="navigation navigation-prev " aria-label="Previous page: 特征预处理"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../day01/section5.html" class="navigation navigation-next " aria-label="Next page: 主成分分析"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"katex":{},"expandable-chapters-small":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
