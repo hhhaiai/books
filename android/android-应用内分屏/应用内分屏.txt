@@ -1,0 +1,4 @@
+
+
+https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/config-introduction-0000001054270212    ----华为适配文档
+https://developer.android.google.cn/guide/topics/large-screens/activity-embedding?hl=zh-cn   google方案
