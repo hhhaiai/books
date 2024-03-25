@@ -1,0 +1,5 @@
+SQLiteDatabase.openDatabase(myPath, null, SQLiteDatabase.OPEN_READWRITE);
+修改为
+SQLiteDatabase.openDatabase(myPath, null, SQLiteDatabase.CREATE_IF_NECESSARY //没有则创建
+                             | SQLiteDatabase.OPEN_READWRITE                 //读写模式打开数据库
+                             | SQLiteDatabase.NO_LOCALIZED_COLLATORS);       //取消本地效验
